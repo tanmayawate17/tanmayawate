@@ -5,6 +5,49 @@ import Navbar from '@/components/ui/navbar';
 import Footer from '@/components/ui/footer';
 
 const Certifications = () => {
+  const completedCertifications = [
+    {
+      title: "Career Essentials in Generative AI",
+      provider: "Microsoft and LinkedIn",
+      date: "2023",
+      description: "Comprehensive introduction to generative AI technologies, applications, and ethical considerations.",
+      skills: ["AI Fundamentals", "Prompt Engineering", "AI Applications", "Ethics in AI"],
+      color: "blue"
+    },
+    {
+      title: "Career Essentials in Business Analysis",
+      provider: "Microsoft and LinkedIn",
+      date: "2023",
+      description: "In-depth training on business analysis methodologies, requirements gathering, and stakeholder management.",
+      skills: ["Requirements Analysis", "Process Modeling", "Data Analysis", "Stakeholder Management"],
+      color: "green"
+    },
+    {
+      title: "Python for Data Science",
+      provider: "NPTEL",
+      date: "2023",
+      description: "Detailed course on using Python for data manipulation, analysis, and visualization.",
+      skills: ["Python Programming", "Data Analysis", "Data Visualization", "Statistical Methods"],
+      color: "pink"
+    },
+    {
+      title: "MATLAB On-ramp and Foundational Certifications",
+      provider: "MathWorks",
+      date: "2023",
+      description: "Comprehensive training on MATLAB fundamentals, data analysis, and algorithm development.",
+      skills: ["MATLAB Programming", "Data Analysis", "Algorithm Development", "Scientific Computing"],
+      color: "blue"
+    },
+    {
+      title: "Simulink On-ramp Certification",
+      provider: "MathWorks",
+      date: "2023",
+      description: "Specialized training on Simulink for modeling, simulating, and analyzing dynamic systems.",
+      skills: ["Simulink Modeling", "Dynamic Systems", "Simulation", "Control Systems"],
+      color: "green"
+    }
+  ];
+
   const ongoingCertifications = [
     {
       title: "Digital Marketing Fundamentals",
@@ -40,29 +83,6 @@ const Certifications = () => {
     }
   ];
 
-  const futureCertifications = [
-    {
-      title: "Process Safety Management",
-      provider: "American Institute of Chemical Engineers (AIChE)",
-      description: "Comprehensive training on implementing process safety principles in chemical engineering operations."
-    },
-    {
-      title: "Chemical Process Simulation",
-      provider: "AspenTech",
-      description: "Advanced training on process simulation software and methodologies for chemical engineering."
-    },
-    {
-      title: "Sustainable Process Engineering",
-      provider: "Institution of Chemical Engineers (IChemE)",
-      description: "Specialized certification focused on sustainable practices and technologies in chemical processing."
-    },
-    {
-      title: "Advanced Process Control",
-      provider: "International Society of Automation (ISA)",
-      description: "In-depth training on modern control systems and automation in chemical processes."
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white">
       <Navbar />
@@ -84,17 +104,17 @@ const Certifications = () => {
         </div>
       </section>
       
-      {/* Ongoing Certifications */}
+      {/* Completed Certifications */}
       <section className="py-16 bg-[#0c0c0c]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-center">
-              <span className="text-white">Ongoing </span>
-              <span className="neon-text-blue">Certifications</span>
+              <span className="text-white">Completed </span>
+              <span className="neon-text-green">Certifications</span>
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in">
-              {ongoingCertifications.map((cert, index) => (
+              {completedCertifications.map((cert, index) => (
                 <div 
                   key={index} 
                   className={`bg-[#0A0A0A] border border-[#333] rounded-lg p-6 transition-all duration-300 hover:shadow-neon-${cert.color} group`}
@@ -134,31 +154,47 @@ const Certifications = () => {
         </div>
       </section>
       
-      {/* Planned Certifications */}
+      {/* Ongoing Certifications */}
       <section className="py-16 bg-[#0A0A0A]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-center">
-              <span className="text-white">Future </span>
-              <span className="neon-text-green">Certifications</span>
+              <span className="text-white">Ongoing </span>
+              <span className="neon-text-blue">Certifications</span>
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in">
-              {futureCertifications.map((cert, index) => (
+              {ongoingCertifications.map((cert, index) => (
                 <div 
                   key={index} 
-                  className="bg-[#0A0A0A] border border-[#333] rounded-lg p-6 transition-all duration-300 hover:border-neon-green group"
+                  className={`bg-[#0A0A0A] border border-[#333] rounded-lg p-6 transition-all duration-300 hover:shadow-neon-${cert.color} group`}
                 >
                   <div className="flex items-start">
-                    <div className="p-3 rounded-md bg-[#111] border border-[#333] group-hover:border-neon-green transition-all duration-300">
-                      <BookOpen className="h-6 w-6 text-gray-400 group-hover:text-neon-green transition-colors duration-300" />
+                    <div className={`p-3 rounded-md bg-[#111] border border-[#333] group-hover:border-neon-${cert.color} transition-all duration-300`}>
+                      <BookOpen className={`h-6 w-6 text-gray-400 group-hover:text-neon-${cert.color} transition-colors duration-300`} />
                     </div>
                     <div className="ml-4">
-                      <h3 className="text-xl font-semibold text-white group-hover:text-neon-green transition-colors duration-300">
+                      <h3 className="text-xl font-semibold text-white group-hover:text-neon-blue transition-colors duration-300">
                         {cert.title}
                       </h3>
-                      <p className="text-gray-400 mt-1 mb-3">{cert.provider}</p>
-                      <p className="text-gray-300">{cert.description}</p>
+                      <div className="flex items-center text-gray-400 mt-1 mb-3">
+                        <span className="mr-3">{cert.provider}</span>
+                        <div className="flex items-center text-sm">
+                          <Calendar className="h-3 w-3 mr-1" />
+                          <span>{cert.date}</span>
+                        </div>
+                      </div>
+                      <p className="text-gray-300 mb-4">{cert.description}</p>
+                      <div className="flex flex-wrap gap-2">
+                        {cert.skills.map((skill, idx) => (
+                          <span 
+                            key={idx} 
+                            className={`text-xs px-2 py-1 bg-[#111] border border-[#333] rounded-md text-gray-400 group-hover:border-neon-${cert.color} transition-all duration-300`}
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -1,17 +1,50 @@
 
 import React from 'react';
-import { Factory, CheckCircle, Calendar } from 'lucide-react';
+import { Factory, CheckCircle, Calendar, MapPin } from 'lucide-react';
 import Navbar from '@/components/ui/navbar';
 import Footer from '@/components/ui/footer';
 
 const IndustryVisits = () => {
-  const keyLearnings = [
-    "Comprehensive Process Safety Management (PSM) protocols and implementation",
-    "Advanced Effluent Treatment Plant (ETP) operations and environmental compliance",
-    "Batch process optimization and quality control procedures",
-    "Sustainable manufacturing practices and energy efficiency measures",
-    "Industrial automation and control systems in chemical manufacturing",
-    "Supply chain management and logistics in the chemical industry"
+  const visits = [
+    {
+      company: "HPCL Mumbai Refinery",
+      location: "Mumbai, Maharashtra",
+      date: "February 2024",
+      description: "My visit to the HPCL Mumbai Refinery was an insightful experience into the world of petroleum refining. Established in 1954, this refinery processes 7.5 MMTPA of crude oil. During the visit, I observed various processing units like the Crude Distillation Unit, Catalytic Reformer, and Fluidized Catalytic Cracking Unit. I learned about refinery operations, safety protocols, environmental management systems, and quality control measures. It was fascinating to see the application of chemical engineering principles in a real-world industrial setting.",
+      highlights: [
+        "Observed various processing units including Crude Distillation Unit, Catalytic Reformer, and Fluidized Catalytic Cracking Unit",
+        "Learned about refinery operations, safety protocols, and environmental management systems",
+        "Understood quality control measures and product testing procedures",
+        "Gained insights into energy optimization strategies used in the refinery",
+        "Explored the integration of automation and control systems in refinery operations"
+      ]
+    },
+    {
+      company: "Gharda Chemicals Limited",
+      location: "Dombivali, Maharashtra",
+      date: "March 2024",
+      description: "Visiting Gharda Chemicals Limited in Dombivali was a valuable learning opportunity in specialty chemical manufacturing. Founded by Dr. K.H. Gharda, this company is known for its innovative approach to chemical manufacturing processes. The visit covered pesticide manufacturing, polymer production, and the company's R&D facilities. I learned about batch processing methods, quality control protocols, and effluent treatment systems. The company's commitment to research and innovation in developing novel chemical compounds and improving manufacturing processes was particularly inspiring.",
+      highlights: [
+        "Explored pesticide manufacturing and polymer production processes",
+        "Understood batch processing methods and scale-up challenges",
+        "Studied their quality control protocols for ensuring product consistency",
+        "Observed their effluent treatment systems and environmental compliance measures",
+        "Learned about Dr. Gharda's approach to innovation and process improvement"
+      ]
+    },
+    {
+      company: "Aarti Industries Limited",
+      location: "Vapi, Gujarat",
+      date: "April 2024",
+      description: "The visit to Aarti Industries Limited in Vapi provided comprehensive insights into integrated chemical manufacturing. As a leading manufacturer of specialty chemicals and pharmaceuticals, the company demonstrates exceptional operational efficiency. I toured their manufacturing facilities for benzene-based intermediates and observed continuous process operations. Their focus on process intensification, safety management, and sustainable practices was evident throughout the facility. I gained valuable knowledge about speciality chemicals manufacturing and the importance of vertical integration in the chemical industry.",
+      highlights: [
+        "Toured manufacturing facilities for benzene-based intermediates",
+        "Observed continuous process operations and reactor design principles",
+        "Learned about process intensification strategies to improve efficiency",
+        "Understood their safety management systems and hazard control measures",
+        "Explored their sustainable practices and waste minimization approaches"
+      ]
+    }
   ];
 
   return (
@@ -39,85 +72,54 @@ const IndustryVisits = () => {
       {/* Main Content */}
       <section className="py-16 bg-[#0c0c0c]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-[#0A0A0A] rounded-lg border border-[#333] p-8 mb-16 animate-fade-in hover:shadow-neon-blue transition-all duration-500">
-              <div className="flex flex-col md:flex-row gap-8">
-                <div className="md:w-1/3">
-                  <div className="bg-[#111] p-6 rounded-lg border border-[#333] text-center">
-                    <Factory className="h-16 w-16 text-neon-blue mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold text-white mb-2">Gharda Chemicals</h3>
-                    <p className="text-gray-400 mb-1">Dombivali, Maharashtra</p>
-                    <div className="flex items-center justify-center text-gray-400 mt-3">
-                      <Calendar className="h-4 w-4 mr-2" />
-                      <span>April 2025 (Upcoming)</span>
+          <div className="max-w-4xl mx-auto space-y-16">
+            {visits.map((visit, index) => (
+              <div 
+                key={index}
+                className="bg-[#0A0A0A] rounded-lg border border-[#333] p-8 animate-fade-in hover:shadow-neon-blue transition-all duration-500"
+              >
+                <div className="flex flex-col md:flex-row gap-8">
+                  <div className="md:w-1/3">
+                    <div className="bg-[#111] p-6 rounded-lg border border-[#333] text-center">
+                      <Factory className="h-16 w-16 text-neon-blue mx-auto mb-4" />
+                      <h3 className="text-xl font-semibold text-white mb-2">{visit.company}</h3>
+                      <div className="flex items-center justify-center text-gray-400 mb-1">
+                        <MapPin className="h-4 w-4 mr-2" />
+                        <span>{visit.location}</span>
+                      </div>
+                      <div className="flex items-center justify-center text-gray-400 mt-3">
+                        <Calendar className="h-4 w-4 mr-2" />
+                        <span>{visit.date}</span>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                
-                <div className="md:w-2/3">
-                  <h3 className="text-2xl font-semibold mb-4 text-white">Gharda Chemicals Industrial Visit</h3>
-                  <div className="mb-6">
-                    <p className="text-gray-300 mb-4">
-                      This upcoming industrial visit to Gharda Chemicals' facility in Dombivali represents a significant opportunity to
-                      observe and learn from one of India's leading chemical manufacturing companies. The visit is scheduled for April 2025
-                      and will provide valuable insights into industrial-scale chemical processes.
-                    </p>
-                    <p className="text-gray-300 mb-4">
-                      Gharda Chemicals is renowned for its innovative approach to chemical manufacturing and has established itself as a
-                      pioneer in the development of agrochemicals, specialty chemicals, and high-performance polymers. The company's commitment
-                      to research and development, quality control, and sustainable practices makes it an ideal learning environment for
-                      chemical engineering students.
-                    </p>
-                    <p className="text-gray-300">
-                      During this visit, I expect to gain practical knowledge about industrial chemical processes, safety protocols,
-                      quality control measures, and environmental compliance procedures that are essential for a comprehensive understanding
-                      of chemical engineering in practice.
-                    </p>
                   </div>
                   
-                  <div className="bg-[#111] rounded-lg p-6 border border-[#333]">
-                    <h4 className="text-xl font-medium mb-4 text-white">Key Learning Objectives</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {keyLearnings.map((item, index) => (
-                        <div key={index} className="flex items-start">
-                          <CheckCircle className="h-5 w-5 text-neon-blue mr-2 flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-300">{item}</span>
-                        </div>
-                      ))}
+                  <div className="md:w-2/3">
+                    <h3 className="text-2xl font-semibold mb-4 text-white">{visit.company} Visit</h3>
+                    <div className="mb-6">
+                      <p className="text-gray-300 mb-4">
+                        {visit.description}
+                      </p>
+                    </div>
+                    
+                    <div className="bg-[#111] rounded-lg p-6 border border-[#333]">
+                      <h4 className="text-xl font-medium mb-4 text-white">Key Learnings</h4>
+                      <div className="space-y-3">
+                        {visit.highlights.map((item, idx) => (
+                          <div key={idx} className="flex items-start">
+                            <CheckCircle className="h-5 w-5 text-neon-blue mr-2 flex-shrink-0 mt-0.5" />
+                            <span className="text-gray-300">{item}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            
-            {/* Future Visits Section */}
-            <div className="animate-fade-in">
-              <h2 className="text-2xl font-bold mb-8 text-center">
-                <span className="text-white">Future Industry </span>
-                <span className="neon-text-pink">Visits</span>
-              </h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-[#0A0A0A] rounded-lg border border-[#333] p-6 hover:border-neon-pink transition-all duration-300">
-                  <h3 className="text-xl font-semibold mb-2 text-white">Reliance Industries</h3>
-                  <p className="text-gray-400 mb-4">Jamnagar Refinery Complex</p>
-                  <p className="text-gray-300">
-                    Planned visit to one of the world's largest refining complexes to understand large-scale petroleum processing operations.
-                  </p>
-                </div>
-                
-                <div className="bg-[#0A0A0A] rounded-lg border border-[#333] p-6 hover:border-neon-green transition-all duration-300">
-                  <h3 className="text-xl font-semibold mb-2 text-white">Hindustan Unilever</h3>
-                  <p className="text-gray-400 mb-4">Manufacturing Facility</p>
-                  <p className="text-gray-300">
-                    Planned visit to observe consumer product manufacturing processes and quality control systems.
-                  </p>
-                </div>
-              </div>
-            </div>
+            ))}
             
             {/* Value of Industry Visits */}
-            <div className="mt-16 animate-fade-in">
+            <div className="animate-fade-in">
               <h2 className="text-2xl font-bold mb-8 text-center">
                 <span className="text-white">Value of Industry </span>
                 <span className="neon-text-green">Exposure</span>
