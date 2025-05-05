@@ -1,0 +1,243 @@
+
+import React from 'react';
+import { Code, Database, PenTool, ChartBar, FileText, GraduationCap } from 'lucide-react';
+import Navbar from '@/components/ui/navbar';
+import Footer from '@/components/ui/footer';
+import SkillCard from '@/components/skill-card';
+
+const Skills = () => {
+  const technicalSkills = [
+    {
+      title: 'MATLAB & Simulink',
+      icon: Code,
+      description: 'Advanced simulation and computational analysis',
+      color: 'blue'
+    },
+    {
+      title: 'Python',
+      icon: Code,
+      description: 'Data analysis and process automation',
+      color: 'blue'
+    },
+    {
+      title: 'JavaScript',
+      icon: Code,
+      description: 'Web application development',
+      color: 'blue'
+    },
+    {
+      title: 'HTML & CSS',
+      icon: Code,
+      description: 'Frontend web development',
+      color: 'blue'
+    },
+    {
+      title: 'DWSIM',
+      icon: Database,
+      description: 'Chemical process simulation',
+      color: 'blue'
+    },
+    {
+      title: 'Process Engineering',
+      icon: Database,
+      description: 'Design and optimization of chemical processes',
+      color: 'blue'
+    }
+  ];
+
+  const businessSkills = [
+    {
+      title: 'Business Analysis',
+      icon: ChartBar,
+      description: 'Strategic analysis and planning',
+      color: 'pink'
+    },
+    {
+      title: 'Digital Marketing',
+      icon: FileText,
+      description: 'Social media and content marketing',
+      color: 'pink'
+    },
+    {
+      title: 'Finance',
+      icon: ChartBar,
+      description: 'Stock market analysis and financial planning',
+      color: 'pink'
+    },
+    {
+      title: 'Content Creation',
+      icon: FileText,
+      description: 'Development of engaging digital content',
+      color: 'pink'
+    }
+  ];
+
+  const creativeSkills = [
+    {
+      title: 'Drawing',
+      icon: PenTool,
+      description: 'Freehand drawing and illustration',
+      color: 'green'
+    },
+    {
+      title: 'Sketching',
+      icon: PenTool,
+      description: 'Detailed sketch creation',
+      color: 'green'
+    },
+    {
+      title: 'Nature Landscapes',
+      icon: PenTool,
+      description: 'Artistic representation of natural scenery',
+      color: 'green'
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-[#0A0A0A] text-white">
+      <Navbar />
+      
+      {/* Page Header */}
+      <section className="pt-32 pb-20 relative overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-20">
+          <div className="absolute top-1/3 right-1/4 w-96 h-96 rounded-full bg-neon-pink blur-[100px]"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-white">My </span>
+              <span className="neon-text-pink">Skills</span>
+            </h1>
+            <p className="text-xl text-gray-400">A diverse set of technical, business, and creative abilities</p>
+          </div>
+        </div>
+      </section>
+      
+      {/* Technical Skills */}
+      <section className="py-16 bg-[#0c0c0c]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold mb-12 text-center">
+              <span className="text-white">Technical </span>
+              <span className="neon-text-blue">Skills</span>
+            </h2>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in">
+              {technicalSkills.map((skill, index) => (
+                <SkillCard
+                  key={index}
+                  title={skill.title}
+                  icon={skill.icon}
+                  description={skill.description}
+                  color={skill.color as 'blue' | 'pink' | 'green'}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Business Skills */}
+      <section className="py-16 bg-[#0A0A0A]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold mb-12 text-center">
+              <span className="text-white">Business </span>
+              <span className="neon-text-pink">Skills</span>
+            </h2>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 animate-fade-in">
+              {businessSkills.map((skill, index) => (
+                <SkillCard
+                  key={index}
+                  title={skill.title}
+                  icon={skill.icon}
+                  description={skill.description}
+                  color={skill.color as 'blue' | 'pink' | 'green'}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Creative Skills */}
+      <section className="py-16 bg-[#0c0c0c]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold mb-12 text-center">
+              <span className="text-white">Creative </span>
+              <span className="neon-text-green">Skills</span>
+            </h2>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 animate-fade-in">
+              {creativeSkills.map((skill, index) => (
+                <SkillCard
+                  key={index}
+                  title={skill.title}
+                  icon={skill.icon}
+                  description={skill.description}
+                  color={skill.color as 'blue' | 'pink' | 'green'}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Education */}
+      <section className="py-16 bg-[#0A0A0A]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-12 text-center">
+              <span className="text-white">Education & </span>
+              <span className="neon-text-blue">Certifications</span>
+            </h2>
+            
+            <div className="mb-12 animate-fade-in">
+              <div className="flex items-start">
+                <div className="mr-4">
+                  <GraduationCap className="h-10 w-10 text-neon-blue" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white">B.Tech in Chemical Engineering</h3>
+                  <p className="text-gray-400 mb-2">Institute of Chemical Technology, Mumbai • 2022 - Present</p>
+                  <p className="text-gray-300">
+                    Pursuing my bachelor's degree at one of India's premier institutes for chemical engineering, focusing on process design, simulation, and industry automation.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mb-8 animate-fade-in">
+              <h3 className="text-xl font-semibold mb-4 text-white">Ongoing Certifications</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="bg-[#0c0c0c] border border-[#333] rounded-lg p-4 hover:border-neon-pink transition-colors">
+                  <h4 className="text-lg font-medium mb-1 text-white">Digital Marketing Fundamentals</h4>
+                  <p className="text-gray-400 text-sm">HubSpot • In Progress</p>
+                </div>
+                <div className="bg-[#0c0c0c] border border-[#333] rounded-lg p-4 hover:border-neon-pink transition-colors">
+                  <h4 className="text-lg font-medium mb-1 text-white">Content Marketing</h4>
+                  <p className="text-gray-400 text-sm">HubSpot • In Progress</p>
+                </div>
+                <div className="bg-[#0c0c0c] border border-[#333] rounded-lg p-4 hover:border-neon-pink transition-colors">
+                  <h4 className="text-lg font-medium mb-1 text-white">Social Media Marketing</h4>
+                  <p className="text-gray-400 text-sm">HubSpot • In Progress</p>
+                </div>
+                <div className="bg-[#0c0c0c] border border-[#333] rounded-lg p-4 hover:border-neon-pink transition-colors">
+                  <h4 className="text-lg font-medium mb-1 text-white">Digital Advertising</h4>
+                  <p className="text-gray-400 text-sm">HubSpot • In Progress</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Skills;
