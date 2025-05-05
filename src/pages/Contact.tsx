@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Mail, Linkedin, Github, MapPin, Send } from 'lucide-react';
+import { Mail, Linkedin, Instagram, MapPin, Send } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import Navbar from '@/components/ui/navbar';
 import Footer from '@/components/ui/footer';
@@ -195,7 +195,7 @@ const Contact = () => {
                         <div className="flex items-center justify-center h-12 w-12 rounded-md bg-[#111] border border-[#333]">
                           <div className="flex space-x-2">
                             <Linkedin className="h-5 w-5 text-neon-green" />
-                            <Github className="h-5 w-5 text-neon-blue" />
+                            <Instagram className="h-5 w-5 text-neon-blue" />
                           </div>
                         </div>
                       </div>
@@ -205,8 +205,8 @@ const Contact = () => {
                           <a href="https://www.linkedin.com/in/tanmay-awate-027792282/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neon-blue transition-colors">
                             <Linkedin className="h-5 w-5" />
                           </a>
-                          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neon-pink transition-colors">
-                            <Github className="h-5 w-5" />
+                          <a href="https://www.instagram.com/tanmay_awate1729/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neon-pink transition-colors">
+                            <Instagram className="h-5 w-5" />
                           </a>
                         </div>
                       </div>
@@ -281,8 +281,8 @@ const Contact = () => {
               <a href="https://www.linkedin.com/in/tanmay-awate-027792282/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#111] border border-[#333] text-gray-400 hover:text-neon-blue hover:border-neon-blue transition-all duration-300">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#111] border border-[#333] text-gray-400 hover:text-neon-pink hover:border-neon-pink transition-all duration-300">
-                <Github className="h-5 w-5" />
+              <a href="https://www.instagram.com/tanmay_awate1729/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#111] border border-[#333] text-gray-400 hover:text-neon-pink hover:border-neon-pink transition-all duration-300">
+                <Instagram className="h-5 w-5" />
               </a>
               <a href="mailto:tanmayawate0017@gmail.com" className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#111] border border-[#333] text-gray-400 hover:text-neon-green hover:border-neon-green transition-all duration-300">
                 <Mail className="h-5 w-5" />

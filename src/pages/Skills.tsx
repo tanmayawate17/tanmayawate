@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Code, Database, PenTool, ChartBar, FileText, GraduationCap } from 'lucide-react';
+import { Code, Database, PenTool, ChartBar, FileText } from 'lucide-react';
 import Navbar from '@/components/ui/navbar';
 import Footer from '@/components/ui/footer';
 import SkillCard from '@/components/skill-card';
@@ -181,55 +181,6 @@ const Skills = () => {
                   color={skill.color as 'blue' | 'pink' | 'green'}
                 />
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Education */}
-      <section className="py-16 bg-[#0A0A0A]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center">
-              <span className="text-white">Education & </span>
-              <span className="neon-text-blue">Certifications</span>
-            </h2>
-            
-            <div className="mb-12 animate-fade-in">
-              <div className="flex items-start">
-                <div className="mr-4">
-                  <GraduationCap className="h-10 w-10 text-neon-blue" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white">B.Tech in Chemical Engineering</h3>
-                  <p className="text-gray-400 mb-2">Institute of Chemical Technology, Mumbai • 2022 - Present</p>
-                  <p className="text-gray-300">
-                    Pursuing my bachelor's degree at one of India's premier institutes for chemical engineering, focusing on process design, simulation, and industry automation.
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="mb-8 animate-fade-in">
-              <h3 className="text-xl font-semibold mb-4 text-white">Ongoing Certifications</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="bg-[#0c0c0c] border border-[#333] rounded-lg p-4 hover:border-neon-pink transition-colors">
-                  <h4 className="text-lg font-medium mb-1 text-white">Digital Marketing Fundamentals</h4>
-                  <p className="text-gray-400 text-sm">HubSpot • In Progress</p>
-                </div>
-                <div className="bg-[#0c0c0c] border border-[#333] rounded-lg p-4 hover:border-neon-pink transition-colors">
-                  <h4 className="text-lg font-medium mb-1 text-white">Content Marketing</h4>
-                  <p className="text-gray-400 text-sm">HubSpot • In Progress</p>
-                </div>
-                <div className="bg-[#0c0c0c] border border-[#333] rounded-lg p-4 hover:border-neon-pink transition-colors">
-                  <h4 className="text-lg font-medium mb-1 text-white">Social Media Marketing</h4>
-                  <p className="text-gray-400 text-sm">HubSpot • In Progress</p>
-                </div>
-                <div className="bg-[#0c0c0c] border border-[#333] rounded-lg p-4 hover:border-neon-pink transition-colors">
-                  <h4 className="text-lg font-medium mb-1 text-white">Digital Advertising</h4>
-                  <p className="text-gray-400 text-sm">HubSpot • In Progress</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>

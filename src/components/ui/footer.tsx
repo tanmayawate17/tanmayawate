@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Instagram, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -14,11 +14,11 @@ const Footer = () => {
               Chemical Engineering Innovator passionate about technology and innovation.
             </p>
             <div className="flex space-x-4">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neon-blue transition-colors">
-                <Github size={20} />
-              </a>
               <a href="https://www.linkedin.com/in/tanmay-awate-027792282/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neon-blue transition-colors">
                 <Linkedin size={20} />
+              </a>
+              <a href="https://www.instagram.com/tanmay_awate1729/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neon-blue transition-colors">
+                <Instagram size={20} />
               </a>
               <a href="mailto:tanmayawate0017@gmail.com" className="text-gray-400 hover:text-neon-blue transition-colors">
                 <Mail size={20} />

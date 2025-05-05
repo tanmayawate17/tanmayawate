@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { GraduationCap, BookOpen, Award } from 'lucide-react';
+import { GraduationCap } from 'lucide-react';
 import Navbar from '@/components/ui/navbar';
 import Footer from '@/components/ui/footer';
 
@@ -81,70 +81,6 @@ const Education = () => {
                   <p className="text-gray-300">
                     The rigorous curriculum at ICT combines theoretical knowledge with practical applications, preparing students to tackle complex engineering challenges and drive innovation in the chemical industry.
                   </p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Certifications Section */}
-            <div className="mb-16 animate-fade-in">
-              <h2 className="text-2xl font-bold mb-8 text-center">
-                <span className="text-white">Professional </span>
-                <span className="neon-text-pink">Certifications</span>
-              </h2>
-              
-              <div className="bg-[#0A0A0A] rounded-lg border border-[#333] p-6 mb-8">
-                <div className="flex items-center mb-4">
-                  <BookOpen className="h-8 w-8 text-neon-pink mr-4" />
-                  <h3 className="text-xl font-semibold text-white">HubSpot Digital Marketing Certifications</h3>
-                </div>
-                <p className="text-gray-300 mb-4">
-                  Currently pursuing a comprehensive suite of digital marketing certifications to develop expertise in modern marketing strategies and techniques.
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-                  <div className="border border-[#333] rounded-md p-4 hover:border-neon-pink transition-duration-300">
-                    <h4 className="text-white font-medium mb-1">Digital Marketing Fundamentals</h4>
-                    <p className="text-gray-400 text-sm">In Progress</p>
-                  </div>
-                  <div className="border border-[#333] rounded-md p-4 hover:border-neon-pink transition-duration-300">
-                    <h4 className="text-white font-medium mb-1">Content Marketing</h4>
-                    <p className="text-gray-400 text-sm">In Progress</p>
-                  </div>
-                  <div className="border border-[#333] rounded-md p-4 hover:border-neon-pink transition-duration-300">
-                    <h4 className="text-white font-medium mb-1">Social Media Marketing</h4>
-                    <p className="text-gray-400 text-sm">In Progress</p>
-                  </div>
-                  <div className="border border-[#333] rounded-md p-4 hover:border-neon-pink transition-duration-300">
-                    <h4 className="text-white font-medium mb-1">Digital Advertising</h4>
-                    <p className="text-gray-400 text-sm">In Progress</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-[#0A0A0A] rounded-lg border border-[#333] p-6">
-                <div className="flex items-center mb-4">
-                  <Award className="h-8 w-8 text-neon-green mr-4" />
-                  <h3 className="text-xl font-semibold text-white">Future Certifications</h3>
-                </div>
-                <p className="text-gray-300 mb-4">
-                  Planning to pursue specialized certifications in chemical engineering and related fields to enhance professional qualifications.
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-                  <div className="border border-[#333] rounded-md p-4 hover:border-neon-green transition-duration-300">
-                    <h4 className="text-white font-medium mb-1">Process Safety Management</h4>
-                    <p className="text-gray-400 text-sm">Planned</p>
-                  </div>
-                  <div className="border border-[#333] rounded-md p-4 hover:border-neon-green transition-duration-300">
-                    <h4 className="text-white font-medium mb-1">Sustainable Process Engineering</h4>
-                    <p className="text-gray-400 text-sm">Planned</p>
-                  </div>
-                  <div className="border border-[#333] rounded-md p-4 hover:border-neon-green transition-duration-300">
-                    <h4 className="text-white font-medium mb-1">Advanced Process Control</h4>
-                    <p className="text-gray-400 text-sm">Planned</p>
-                  </div>
-                  <div className="border border-[#333] rounded-md p-4 hover:border-neon-green transition-duration-300">
-                    <h4 className="text-white font-medium mb-1">Chemical Process Simulation</h4>
-                    <p className="text-gray-400 text-sm">Planned</p>
-                  </div>
                 </div>
               </div>
             </div>

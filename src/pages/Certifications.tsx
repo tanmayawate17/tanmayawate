@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Award, Calendar, ExternalLink, BookOpen } from 'lucide-react';
+import { Award, Calendar, BookOpen } from 'lucide-react';
 import Navbar from '@/components/ui/navbar';
 import Footer from '@/components/ui/footer';
 
@@ -168,62 +168,8 @@ const Certifications = () => {
         </div>
       </section>
       
-      {/* Learning Resources */}
-      <section className="py-16 bg-[#0c0c0c]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center">
-              <span className="text-white">Learning </span>
-              <span className="neon-text-pink">Resources</span>
-            </h2>
-            
-            <div className="bg-[#0A0A0A] border border-[#333] rounded-lg p-8 animate-fade-in">
-              <p className="text-gray-300 mb-6">
-                In addition to formal certifications, I'm constantly expanding my knowledge through various online platforms and resources.
-                Here are some of the platforms I use for continuous learning:
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <a 
-                  href="https://www.coursera.org" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center p-4 bg-[#111] rounded-lg border border-[#333] hover:border-neon-blue transition-all duration-300 group"
-                >
-                  <h3 className="text-lg font-medium mb-2 text-white group-hover:text-neon-blue transition-colors duration-300">Coursera</h3>
-                  <p className="text-gray-400 text-sm text-center mb-3">Courses from top universities and organizations</p>
-                  <ExternalLink className="h-4 w-4 text-gray-400 group-hover:text-neon-blue transition-colors duration-300" />
-                </a>
-                
-                <a 
-                  href="https://www.edx.org" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center p-4 bg-[#111] rounded-lg border border-[#333] hover:border-neon-pink transition-all duration-300 group"
-                >
-                  <h3 className="text-lg font-medium mb-2 text-white group-hover:text-neon-pink transition-colors duration-300">edX</h3>
-                  <p className="text-gray-400 text-sm text-center mb-3">University-level courses in chemical engineering</p>
-                  <ExternalLink className="h-4 w-4 text-gray-400 group-hover:text-neon-pink transition-colors duration-300" />
-                </a>
-                
-                <a 
-                  href="https://www.linkedin.com/learning" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center p-4 bg-[#111] rounded-lg border border-[#333] hover:border-neon-green transition-all duration-300 group"
-                >
-                  <h3 className="text-lg font-medium mb-2 text-white group-hover:text-neon-green transition-colors duration-300">LinkedIn Learning</h3>
-                  <p className="text-gray-400 text-sm text-center mb-3">Business and technical skill development</p>
-                  <ExternalLink className="h-4 w-4 text-gray-400 group-hover:text-neon-green transition-colors duration-300" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
       {/* Educational Philosophy */}
-      <section className="py-16 bg-[#0A0A0A]">
+      <section className="py-16 bg-[#0c0c0c]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <h2 className="text-3xl font-bold mb-6">
