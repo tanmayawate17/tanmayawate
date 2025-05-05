@@ -93,21 +93,21 @@ const Education = () => {
                     <BookOpen className="h-16 w-16 text-neon-pink mb-4" />
                     <h3 className="text-xl font-semibold text-white">Higher Secondary Education</h3>
                     <p className="text-gray-400 mb-2">2021 - 2023</p>
-                    <p className="text-gray-400">Chate Coaching Classes Jrn. Clg. of Science, Pune</p>
+                    <p className="text-gray-400">Chhatrapati Shahu Vidyalaya and Junior College, Kolhapur, Maharashtra</p>
                   </div>
                 </div>
                 
                 <div className="md:w-2/3">
                   <h3 className="text-2xl font-semibold mb-4 text-white">Higher Secondary Education</h3>
                   <p className="text-gray-300 mb-4">
-                    Completed my 12th standard education at Chate Coaching Classes Junior College of Science in Pune, with a focus on Physics, Chemistry, and Mathematics.
+                    Completed my 12th standard education at Chhatrapati Shahu Vidyalaya and Junior College in Kolhapur, Maharashtra, with a focus on Physics, Chemistry, and Mathematics.
                   </p>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
                     <div className="bg-[#0A0A0A] p-4 rounded-md border border-[#333]">
                       <h4 className="text-lg font-medium mb-2 text-white">Academic Performance</h4>
                       <p className="text-gray-300 mb-2">
-                        <span className="text-neon-pink">HSC:</span> 91.17%
+                        <span className="text-neon-pink">HSC:</span> 83%
                       </p>
                     </div>
                     
@@ -115,13 +115,13 @@ const Education = () => {
                       <h4 className="text-lg font-medium mb-2 text-white">Competitive Exams</h4>
                       <ul className="space-y-2">
                         <li className="text-gray-300">
-                          <span className="text-neon-pink">JEE Main:</span> 96.28 percentile
+                          <span className="text-neon-pink">JEE Main:</span> 97.86 percentile
                         </li>
                         <li className="text-gray-300">
-                          <span className="text-neon-pink">JEE Advanced:</span> AIR 15445
+                          <span className="text-neon-pink">JEE Advanced:</span> AIR 19687
                         </li>
                         <li className="text-gray-300">
-                          <span className="text-neon-pink">MHT-CET:</span> 99.64 percentile
+                          <span className="text-neon-pink">MHT-CET:</span> 99.47 percentile
                         </li>
                       </ul>
                     </div>
