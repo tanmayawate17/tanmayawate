@@ -17,10 +17,10 @@ const Footer = () => {
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neon-blue transition-colors">
                 <Github size={20} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neon-blue transition-colors">
+              <a href="https://www.linkedin.com/in/tanmay-awate-027792282/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neon-blue transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="mailto:contact@tanmayawate.com" className="text-gray-400 hover:text-neon-blue transition-colors">
+              <a href="mailto:tanmayawate0017@gmail.com" className="text-gray-400 hover:text-neon-blue transition-colors">
                 <Mail size={20} />
               </a>
             </div>
@@ -40,7 +40,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-heading font-semibold mb-4 text-white">Contact</h3>
             <p className="text-gray-400 mb-2 text-sm">Mumbai, India</p>
-            <p className="text-gray-400 mb-2 text-sm">contact@tanmayawate.com</p>
+            <p className="text-gray-400 mb-2 text-sm">tanmayawate0017@gmail.com</p>
             <p className="text-gray-400 text-sm">Institute of Chemical Technology</p>
           </div>
         </div>

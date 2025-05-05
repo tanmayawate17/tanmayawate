@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -66,15 +65,11 @@ const Index = () => {
             </div>
             <div className="flex justify-center">
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-[#222] shadow-xl">
-                {/* Replace with actual image when available */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#121212] to-[#2a2a2a] flex items-center justify-center">
-                  <span className="text-4xl font-bold text-gray-700">TA</span>
-                </div>
-                {/* <img 
-                  src="/path-to-headshot.jpg" 
+                <img 
+                  src="/lovable-uploads/f7a2c5c2-0d92-486a-9136-a08d8069bb9b.png" 
                   alt="Tanmay Awate" 
                   className="w-full h-full object-cover"
-                /> */}
+                />
               </div>
             </div>
           </div>

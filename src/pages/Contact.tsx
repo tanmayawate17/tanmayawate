@@ -172,8 +172,8 @@ const Contact = () => {
                       </div>
                       <div className="ml-4">
                         <h3 className="text-lg font-medium text-white">Email</h3>
-                        <a href="mailto:contact@tanmayawate.com" className="text-gray-400 hover:text-neon-blue transition-colors">
-                          contact@tanmayawate.com
+                        <a href="mailto:tanmayawate0017@gmail.com" className="text-gray-400 hover:text-neon-blue transition-colors">
+                          tanmayawate0017@gmail.com
                         </a>
                       </div>
                     </div>
@@ -202,7 +202,7 @@ const Contact = () => {
                       <div className="ml-4">
                         <h3 className="text-lg font-medium text-white">Social Profiles</h3>
                         <div className="flex space-x-4 mt-2">
-                          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neon-blue transition-colors">
+                          <a href="https://www.linkedin.com/in/tanmay-awate-027792282/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neon-blue transition-colors">
                             <Linkedin className="h-5 w-5" />
                           </a>
                           <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neon-pink transition-colors">
@@ -278,13 +278,13 @@ const Contact = () => {
               Whether you have a question or just want to say hi, I'll try my best to get back to you!
             </p>
             <div className="flex justify-center space-x-6">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#111] border border-[#333] text-gray-400 hover:text-neon-blue hover:border-neon-blue transition-all duration-300">
+              <a href="https://www.linkedin.com/in/tanmay-awate-027792282/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#111] border border-[#333] text-gray-400 hover:text-neon-blue hover:border-neon-blue transition-all duration-300">
                 <Linkedin className="h-5 w-5" />
               </a>
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#111] border border-[#333] text-gray-400 hover:text-neon-pink hover:border-neon-pink transition-all duration-300">
                 <Github className="h-5 w-5" />
               </a>
-              <a href="mailto:contact@tanmayawate.com" className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#111] border border-[#333] text-gray-400 hover:text-neon-green hover:border-neon-green transition-all duration-300">
+              <a href="mailto:tanmayawate0017@gmail.com" className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#111] border border-[#333] text-gray-400 hover:text-neon-green hover:border-neon-green transition-all duration-300">
                 <Mail className="h-5 w-5" />
               </a>
             </div>
