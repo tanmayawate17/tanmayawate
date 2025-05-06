@@ -13,15 +13,18 @@ const Footer = () => {
             <p className="text-gray-400 mb-4 text-sm">
               Chemical Engineering Innovator passionate about technology and innovation.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://www.linkedin.com/in/tanmay-awate-027792282/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neon-blue transition-colors">
-                <Linkedin size={20} />
+            <div className="flex flex-col space-y-3">
+              <a href="https://www.linkedin.com/in/tanmay-awate-027792282/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neon-blue transition-colors flex items-center">
+                <Linkedin size={20} className="mr-2" />
+                <span>LinkedIn</span>
               </a>
-              <a href="https://www.instagram.com/tanmay_awate1729/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neon-blue transition-colors">
-                <Instagram size={20} />
+              <a href="https://www.instagram.com/tanmay_awate1729/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neon-blue transition-colors flex items-center">
+                <Instagram size={20} className="mr-2" />
+                <span>Instagram</span>
               </a>
-              <a href="mailto:tanmayawate0017@gmail.com" className="text-gray-400 hover:text-neon-blue transition-colors">
-                <Mail size={20} />
+              <a href="mailto:tanmayawate0017@gmail.com" className="text-gray-400 hover:text-neon-blue transition-colors flex items-center">
+                <Mail size={20} className="mr-2" />
+                <span>Email</span>
               </a>
             </div>
           </div>

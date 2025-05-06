@@ -35,7 +35,7 @@ const About = () => {
     {
       year: "Apr 2025",
       title: "Explored Advanced Technologies",
-      description: "Visited Reliance Technology Center, Patalganga, and Aarti Industries, Gharda Chemicals, Dombivli, gaining insights into automation, polymer production, and zero liquid discharge."
+      description: "Visited Reliance Technology Center, Patalganga, and Aarti Industries, Mumbai, gaining insights into automation, polymer production, and zero liquid discharge."
     },
     {
       year: "May 2025",
@@ -106,10 +106,10 @@ const About = () => {
                   {/* Timeline items */}
                   <div className="space-y-12">
                     {journeyItems.map((item, index) => (
-                      <div key={index} className="relative pl-20">
+                      <div key={index} className="relative pl-24">
                         {/* Year marker */}
-                        <div className="absolute left-0 top-0 w-18 h-18">
-                          <div className="flex items-center justify-center w-18 h-18 rounded-full bg-[#111] border border-neon-blue text-neon-blue font-semibold shadow-neon-blue">
+                        <div className="absolute left-0 top-0">
+                          <div className="flex items-center justify-center w-20 h-20 rounded-full bg-[#111] border border-neon-blue text-neon-blue font-semibold shadow-neon-blue p-2">
                             {item.year}
                           </div>
                         </div>

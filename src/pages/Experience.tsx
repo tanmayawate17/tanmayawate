@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Briefcase, CalendarDays } from 'lucide-react';
+import { Briefcase } from 'lucide-react';
 import Navbar from '@/components/ui/navbar';
 import Footer from '@/components/ui/footer';
 
@@ -92,10 +92,7 @@ const Experience = () => {
                   
                   {/* Date indicator */}
                   <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pl-8 md:text-left' : 'md:pr-8 md:text-right'}`}>
-                    <div className="flex items-center mb-2 md:mb-0">
-                      <CalendarDays className={`h-4 w-4 ${index % 2 === 0 ? 'mr-2 md:mr-2 md:order-1' : 'mr-2 md:ml-2 md:order-last'}`} />
-                      <span className="text-gray-400">{exp.period}</span>
-                    </div>
+                    <span className="text-gray-400">{exp.period}</span>
                   </div>
                   
                   {/* Content */}

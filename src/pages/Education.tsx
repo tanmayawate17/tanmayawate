@@ -86,7 +86,7 @@ const Education = () => {
             </div>
             
             {/* Higher Secondary Education */}
-            <div className="animate-fade-in">
+            <div className="animate-fade-in mb-16">
               <div className="flex flex-col md:flex-row items-start gap-8">
                 <div className="md:w-1/3">
                   <div className="bg-[#0A0A0A] p-6 rounded-lg border border-[#333] shadow-neon-pink">
@@ -129,6 +129,38 @@ const Education = () => {
                   
                   <p className="text-gray-300">
                     My strong academic performance and competitive exam results secured my admission to the prestigious Institute of Chemical Technology, Mumbai, for pursuing a degree in Chemical Engineering.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Secondary Education (10th) */}
+            <div className="animate-fade-in">
+              <div className="flex flex-col md:flex-row items-start gap-8">
+                <div className="md:w-1/3">
+                  <div className="bg-[#0A0A0A] p-6 rounded-lg border border-[#333] shadow-neon-green">
+                    <BookOpen className="h-16 w-16 text-neon-green mb-4" />
+                    <h3 className="text-xl font-semibold text-white">Secondary Education</h3>
+                    <p className="text-gray-400 mb-2">Completed 2021</p>
+                    <p className="text-gray-400">Annasaheb Dange International School, Islampur, Maharashtra</p>
+                  </div>
+                </div>
+                
+                <div className="md:w-2/3">
+                  <h3 className="text-2xl font-semibold mb-4 text-white">Secondary Education (10th Standard)</h3>
+                  <p className="text-gray-300 mb-4">
+                    Completed my 10th standard education at Annasaheb Dange International School in Islampur, Maharashtra, building a strong foundation in science and mathematics.
+                  </p>
+                  
+                  <div className="bg-[#0A0A0A] p-4 rounded-md border border-[#333] mb-4">
+                    <h4 className="text-lg font-medium mb-2 text-white">Academic Performance</h4>
+                    <p className="text-gray-300">
+                      <span className="text-neon-green">SSC:</span> 93%
+                    </p>
+                  </div>
+                  
+                  <p className="text-gray-300">
+                    My strong performance in secondary education sparked my interest in science and engineering, leading me to pursue higher studies in the field of chemical engineering.
                   </p>
                 </div>
               </div>
