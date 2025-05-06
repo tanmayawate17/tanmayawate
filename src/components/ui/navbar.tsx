@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -58,13 +59,13 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-6">
+          <div className="hidden md:flex space-x-4 lg:space-x-6 overflow-x-auto">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 className={cn(
-                  'text-sm font-medium transition-all duration-300 hover:text-neon-blue',
+                  'text-sm font-medium transition-all duration-300 hover:text-neon-blue whitespace-nowrap',
                   location.pathname === link.path
                     ? 'text-neon-blue'
                     : 'text-gray-300'
@@ -77,8 +78,9 @@ const Navbar = () => {
 
           {/* Mobile Navigation Button */}
           <button
-            className="md:hidden text-gray-200 focus:outline-none"
+            className="md:hidden text-gray-200 focus:outline-none z-50"
             onClick={toggleMenu}
+            aria-label="Toggle menu"
           >
             {isOpen ? (
               <X className="h-6 w-6 text-neon-blue" />
@@ -92,23 +94,24 @@ const Navbar = () => {
       {/* Mobile Navigation Menu */}
       <div
         className={cn(
-          'md:hidden fixed inset-0 bg-[#0A0A0A]/95 backdrop-blur-md transition-all duration-300 ease-in-out z-40',
+          'md:hidden fixed inset-0 bg-[#0A0A0A]/98 backdrop-blur-lg transition-all duration-300 ease-in-out z-40',
           isOpen
             ? 'opacity-100 translate-x-0'
             : 'opacity-0 -translate-x-full pointer-events-none'
         )}
       >
-        <div className="flex flex-col items-center justify-center h-full space-y-6">
+        <div className="flex flex-col items-center justify-center h-full space-y-8 py-10 px-6">
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
               className={cn(
-                'text-xl font-medium transition-all duration-300 hover:text-neon-blue',
+                'text-xl font-medium transition-all duration-300 hover:text-neon-blue w-full text-center py-2',
                 location.pathname === link.path
                   ? 'text-neon-blue'
                   : 'text-gray-300'
               )}
+              onClick={() => setIsOpen(false)}
             >
               {link.name}
             </Link>

@@ -60,9 +60,9 @@ const IndustryVisits = () => {
     },
     {
       company: "Aarti Industries Limited",
-      location: "Vapi, Gujarat",
+      location: "Mumbai, Maharashtra",
       date: "April 2024",
-      description: "The visit to Aarti Industries Limited in Vapi provided comprehensive insights into integrated chemical manufacturing. As a leading manufacturer of specialty chemicals and pharmaceuticals, the company demonstrates exceptional operational efficiency. I toured their manufacturing facilities for benzene-based intermediates and observed continuous process operations. Their focus on process intensification, safety management, and sustainable practices was evident throughout the facility. I gained valuable knowledge about speciality chemicals manufacturing and the importance of vertical integration in the chemical industry.",
+      description: "The visit to Aarti Industries Limited provided comprehensive insights into integrated chemical manufacturing. As a leading manufacturer of specialty chemicals and pharmaceuticals, the company demonstrates exceptional operational efficiency. I toured their manufacturing facilities for benzene-based intermediates and observed continuous process operations. Their focus on process intensification, safety management, and sustainable practices was evident throughout the facility. I gained valuable knowledge about speciality chemicals manufacturing and the importance of vertical integration in the chemical industry.",
       highlights: [
         "Toured manufacturing facilities for benzene-based intermediates",
         "Observed continuous process operations and reactor design principles",

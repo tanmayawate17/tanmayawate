@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Award } from 'lucide-react';
 import Navbar from '@/components/ui/navbar';
@@ -6,6 +5,33 @@ import Footer from '@/components/ui/footer';
 
 const Certifications = () => {
   const certifications = [
+    {
+      title: "Digital Marketing Strategy",
+      provider: "HubSpot Academy",
+      date: "October 2024",
+      description: "Comprehensive training on digital marketing strategy planning, execution, and optimization for business growth.",
+      skills: ["Marketing Strategy", "Digital Channels", "Audience Targeting", "Campaign Planning"],
+      color: "pink",
+      image: "/lovable-uploads/f7a2c5c2-0d92-486a-9136-a08d8069bb9b.png"
+    },
+    {
+      title: "Social Media Marketing",
+      provider: "HubSpot Academy",
+      date: "September 2024",
+      description: "Advanced course on social media platform optimization, content creation, and engagement strategies.",
+      skills: ["Content Creation", "Community Management", "Analytics", "Platform Strategy"],
+      color: "blue",
+      image: "/lovable-uploads/f7a2c5c2-0d92-486a-9136-a08d8069bb9b.png"
+    },
+    {
+      title: "Content Marketing",
+      provider: "HubSpot Academy",
+      date: "August 2024",
+      description: "Specialized training on creating and optimizing content for maximum engagement and conversion.",
+      skills: ["Content Strategy", "SEO Writing", "Content Distribution", "Audience Analysis"],
+      color: "green",
+      image: "/lovable-uploads/f7a2c5c2-0d92-486a-9136-a08d8069bb9b.png"
+    },
     {
       title: "Career Essentials in Generative AI",
       provider: "Microsoft and LinkedIn",
@@ -91,19 +117,19 @@ const Certifications = () => {
               <span className="neon-text-green">Certifications</span>
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 animate-fade-in">
               {certifications.map((cert, index) => (
                 <div 
                   key={index} 
-                  className={`bg-[#0A0A0A] border border-[#333] rounded-lg p-6 transition-all duration-300 hover:shadow-neon-${cert.color} group`}
+                  className={`bg-[#0A0A0A] border border-[#333] rounded-lg p-8 transition-all duration-300 hover:shadow-neon-${cert.color} group`}
                 >
-                  <div className="flex flex-col space-y-4">
+                  <div className="flex flex-col space-y-6">
                     {cert.image && (
-                      <div className="w-full h-48 rounded-md overflow-hidden border border-[#333] group-hover:border-neon-blue transition-all duration-300">
+                      <div className="w-full h-56 md:h-64 rounded-md overflow-hidden border border-[#333] group-hover:border-neon-blue transition-all duration-300">
                         <img 
                           src={cert.image} 
                           alt={`${cert.title} Certificate`} 
-                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                          className="w-full h-full object-contain p-2 hover:scale-105 transition-transform duration-300"
                         />
                       </div>
                     )}
