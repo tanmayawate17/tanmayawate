@@ -7,39 +7,51 @@ import Footer from '@/components/ui/footer';
 const Experience = () => {
   const experiences = [
     {
-      title: "Content Creation for Startups",
-      company: "Freelance",
-      period: "2023 - Present",
-      description: "Creating engaging digital content for technology startups, focusing on social media presence and audience engagement strategies.",
+      title: "Research Internship - Computational Fluid Dynamics",
+      company: "Institute of Chemical Technology, Mumbai",
+      period: "May 2025 - Present",
+      description: "Currently pursuing a research internship under Prof. Yogesh Shinde, focusing on simulating different impeller types in Continuous Stirred Tank Reactors (CSTR) and analyzing the computational fluid dynamics. The research aims to optimize reactor design and improve mixing efficiency through advanced CFD techniques.",
       responsibilities: [
-        "Developing comprehensive social media content calendars",
-        "Creating engaging posts optimized for different platforms",
-        "Analyzing performance metrics and optimizing content strategy",
-        "Collaborating with graphic designers for visual content"
+        "Simulating various impeller designs in CSTR using computational fluid dynamics software",
+        "Analyzing flow patterns, mixing efficiency, and shear stress distribution",
+        "Optimizing reactor designs based on simulation results",
+        "Documenting findings for potential publication in academic journals"
+      ]
+    },
+    {
+      title: "Social Media Manager",
+      company: "ICT-Skin Donation Awareness Campaign",
+      period: "February 2025 - Present",
+      description: "Managing social media presence for the Skin Donation Awareness Campaign at ICT, focusing on creating engaging content and expanding the campaign's digital reach to promote awareness about skin donation.",
+      responsibilities: [
+        "Managed LinkedIn and X accounts, creating engaging content for project visibility",
+        "Enhanced audience engagement through responsive communication and strategic posts",
+        "Designed user-friendly Google Forms for inquiries and skin donation pledges",
+        "Collaborated with teams to align social media efforts with campaign goals"
       ]
     },
     {
       title: "Digital Marketing Intern",
-      company: "Future Position",
-      period: "Upcoming",
-      description: "Placeholder for future internship opportunity in digital marketing, focusing on strategy development and implementation for businesses in the technology sector.",
+      company: "Om Industries, Islampur, Maharashtra",
+      period: "May 2024 - July 2024",
+      description: "Served as a Digital Marketing Intern, establishing and enhancing the company's online presence through strategic digital marketing initiatives.",
       responsibilities: [
-        "Assist in developing and implementing digital marketing strategies",
-        "Conduct market research and competitor analysis",
-        "Manage social media accounts and create engaging content",
-        "Track and analyze campaign performance metrics"
+        "Created a comprehensive company profile highlighting key services and capabilities",
+        "Set up and optimized the company's LinkedIn page for professional networking",
+        "Enhanced online visibility through strategic content creation",
+        "Established digital marketing best practices for ongoing implementation"
       ]
     },
     {
-      title: "Chemical Engineering Intern",
-      company: "Future Position",
-      period: "Upcoming",
-      description: "Placeholder for future internship in chemical engineering, focusing on process simulation, optimization, and sustainable practices.",
+      title: "Academic Content Developer",
+      company: "Mohim Academy, Kolhapur, Maharashtra",
+      period: "July 2023 - September 2023",
+      description: "Worked as an Academic Content Developer, creating educational materials for students preparing for competitive exams like CET and JEE.",
       responsibilities: [
-        "Assist in process design and optimization projects",
-        "Conduct simulations using industry-standard software",
-        "Collect and analyze experimental data",
-        "Contribute to research on sustainable chemical processes"
+        "Developed comprehensive lecture notes, assignments, and tests for CET/JEE students",
+        "Collaborated with faculty to ensure quality materials for student success",
+        "Created problem-solving strategies for complex science and mathematics concepts",
+        "Designed materials tailored to different learning styles and ability levels"
       ]
     }
   ];
@@ -125,7 +137,7 @@ const Experience = () => {
                 <h3 className="text-2xl font-bold mb-4">Looking for New Opportunities</h3>
                 <p className="text-gray-300 max-w-2xl mx-auto mb-8">
                   I am actively seeking internships and project collaborations in chemical engineering, process automation, 
-                  and digital marketing to expand my practical experience and contribute to innovative solutions.
+                  artificial intelligence, and digital marketing to expand my practical experience and contribute to innovative solutions.
                 </p>
                 <a 
                   href="/contact" 

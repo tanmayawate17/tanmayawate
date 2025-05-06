@@ -193,22 +193,30 @@ const Contact = () => {
                     <div className="flex items-start">
                       <div className="flex-shrink-0">
                         <div className="flex items-center justify-center h-12 w-12 rounded-md bg-[#111] border border-[#333]">
-                          <div className="flex space-x-2">
-                            <Linkedin className="h-5 w-5 text-neon-green" />
-                            <Instagram className="h-5 w-5 text-neon-blue" />
-                          </div>
+                          <Linkedin className="h-6 w-6 text-neon-blue" />
                         </div>
                       </div>
                       <div className="ml-4">
-                        <h3 className="text-lg font-medium text-white">Social Profiles</h3>
-                        <div className="flex space-x-4 mt-2">
-                          <a href="https://www.linkedin.com/in/tanmay-awate-027792282/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neon-blue transition-colors">
-                            <Linkedin className="h-5 w-5" />
-                          </a>
-                          <a href="https://www.instagram.com/tanmay_awate1729/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neon-pink transition-colors">
-                            <Instagram className="h-5 w-5" />
-                          </a>
+                        <h3 className="text-lg font-medium text-white">LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/tanmay-awate-027792282/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neon-blue transition-colors flex items-center">
+                          <Linkedin className="h-5 w-5 mr-2" />
+                          <span>Tanmay Awate</span>
+                        </a>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0">
+                        <div className="flex items-center justify-center h-12 w-12 rounded-md bg-[#111] border border-[#333]">
+                          <Instagram className="h-6 w-6 text-neon-pink" />
                         </div>
+                      </div>
+                      <div className="ml-4">
+                        <h3 className="text-lg font-medium text-white">Instagram</h3>
+                        <a href="https://www.instagram.com/tanmay_awate1729/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neon-pink transition-colors flex items-center">
+                          <Instagram className="h-5 w-5 mr-2" />
+                          <span>@tanmay_awate1729</span>
+                        </a>
                       </div>
                     </div>
                   </div>

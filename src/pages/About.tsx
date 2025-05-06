@@ -6,6 +6,44 @@ import Navbar from '@/components/ui/navbar';
 import Footer from '@/components/ui/footer';
 
 const About = () => {
+  const journeyItems = [
+    {
+      year: "2021",
+      title: "Excelled in 10th Standard",
+      description: "Achieved stellar performance in 10th board exams, igniting my passion for science and engineering."
+    },
+    {
+      year: "2023",
+      title: "Conquered Competitive Exams",
+      description: "Scored 99.47 percentile in CET, 97.86 percentile in JEE Mains, and cleared JEE Advanced, and completed 12th boards with 83%, opening doors to top institutes."
+    },
+    {
+      year: "2023",
+      title: "Joined ICT, Mumbai",
+      description: "Enrolled in B.E Chemical Engineering at ICT, Mumbai, exploring thermodynamics and process control."
+    },
+    {
+      year: "2023–2024",
+      title: "Immersed in Chemical Engineering",
+      description: "Learned MATLAB, Simulink, Python, and started HubSpot digital marketing certifications."
+    },
+    {
+      year: "Jan 2025",
+      title: "Expanded Industry Exposure",
+      description: "Toured Ahuja Engineering Services and NFC Effluent Treatment Company, Hyderabad, learning biogas production and effluent treatment."
+    },
+    {
+      year: "Apr 2025",
+      title: "Explored Advanced Technologies",
+      description: "Visited Reliance Technology Center, Patalganga, and Aarti Industries, Gharda Chemicals, Dombivli, gaining insights into automation, polymer production, and zero liquid discharge."
+    },
+    {
+      year: "May 2025",
+      title: "Ongoing Community and Research Impact",
+      description: "Contributing to ICT Skin Donation Community Project and pursuing CFD research internship under Prof. Yogesh Shinde, focusing on CSTR impeller performance."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white">
       <Navbar />
@@ -58,23 +96,30 @@ const About = () => {
 
               <div className="mb-12">
                 <h2 className="text-2xl font-semibold mb-6 neon-text-blue">My Journey</h2>
-                <div className="space-y-8">
-                  <div className="timeline-item">
-                    <h3 className="text-xl font-medium text-white">Chemical Engineering Undergraduate</h3>
-                    <p className="text-gray-400 mb-2">2022 - Present</p>
-                    <p className="text-gray-300">Pursuing B.Tech in Chemical Engineering at the Institute of Chemical Technology, Mumbai, one of India's premier institutions for chemical engineering education.</p>
-                  </div>
+                <p className="text-gray-300 leading-relaxed mb-8 neon-text-blue">
+                  My journey reflects a passion for chemical engineering, innovation, and social impact.
+                </p>
+                <div className="relative">
+                  {/* Timeline line */}
+                  <div className="absolute left-9 top-0 bottom-0 w-px bg-gradient-to-b from-neon-blue via-neon-pink to-neon-green"></div>
                   
-                  <div className="timeline-item">
-                    <h3 className="text-xl font-medium text-white">Digital Marketing Certification</h3>
-                    <p className="text-gray-400 mb-2">Ongoing</p>
-                    <p className="text-gray-300">Currently pursuing various HubSpot certifications in Digital Marketing to expand my business and marketing acumen.</p>
-                  </div>
-                  
-                  <div className="timeline-item">
-                    <h3 className="text-xl font-medium text-white">Industry Visit - Gharda Chemicals</h3>
-                    <p className="text-gray-400 mb-2">April 2025 (Upcoming)</p>
-                    <p className="text-gray-300">Scheduled visit to Gharda Chemicals to gain practical insights into industrial chemical processes and safety management.</p>
+                  {/* Timeline items */}
+                  <div className="space-y-12">
+                    {journeyItems.map((item, index) => (
+                      <div key={index} className="relative pl-20">
+                        {/* Year marker */}
+                        <div className="absolute left-0 top-0 w-18 h-18">
+                          <div className="flex items-center justify-center w-18 h-18 rounded-full bg-[#111] border border-neon-blue text-neon-blue font-semibold shadow-neon-blue">
+                            {item.year}
+                          </div>
+                        </div>
+                        {/* Content */}
+                        <div className="bg-[#0A0A0A] p-5 rounded-lg border border-[#333] hover:border-neon-blue hover:shadow-neon-blue transition-all duration-300 hover:scale-[1.02]">
+                          <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
+                          <p className="text-gray-300">{item.description}</p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>

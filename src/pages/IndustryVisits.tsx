@@ -7,16 +7,16 @@ import Footer from '@/components/ui/footer';
 const IndustryVisits = () => {
   const visits = [
     {
-      company: "HPCL Mumbai Refinery",
-      location: "Mumbai, Maharashtra",
-      date: "February 2024",
-      description: "My visit to the HPCL Mumbai Refinery was an insightful experience into the world of petroleum refining. Established in 1954, this refinery processes 7.5 MMTPA of crude oil. During the visit, I observed various processing units like the Crude Distillation Unit, Catalytic Reformer, and Fluidized Catalytic Cracking Unit. I learned about refinery operations, safety protocols, environmental management systems, and quality control measures. It was fascinating to see the application of chemical engineering principles in a real-world industrial setting.",
+      company: "Reliance Technology Center",
+      location: "Patalganga, Maharashtra",
+      date: "April 2, 2025",
+      description: "My visit to Reliance Technology Center in Patalganga provided invaluable insights into advanced polyester polymer production at their CPP-7 facility. The tour showcased Reliance's state-of-the-art manufacturing processes and cutting-edge technology integration. The highlight was observing their sophisticated control room, where engineers monitor and manage the entire production process through advanced automation systems. The facility exemplifies Reliance's commitment to innovation, featuring real-time process control and intricate instrumentation that ensures precision in every aspect of polymer production. What particularly impressed me was how they've implemented energy-efficient technologies while maintaining strict safety protocols. This visit demonstrated how a continuous process plant operates at scale, balancing production demands with sustainability considerations. It was fascinating to see theoretical concepts from my chemical engineering coursework applied in such a sophisticated industrial setting.",
       highlights: [
-        "Observed various processing units including Crude Distillation Unit, Catalytic Reformer, and Fluidized Catalytic Cracking Unit",
-        "Learned about refinery operations, safety protocols, and environmental management systems",
-        "Understood quality control measures and product testing procedures",
-        "Gained insights into energy optimization strategies used in the refinery",
-        "Explored the integration of automation and control systems in refinery operations"
+        "Observed advanced automation systems and real-time process control in polyester polymer production",
+        "Learned about instrumentation and monitoring techniques in the control room environment",
+        "Gained insights into energy efficiency measures in continuous processing operations",
+        "Understood the implementation of safety protocols in large-scale chemical manufacturing",
+        "Explored the practical applications of process engineering principles in industrial settings"
       ]
     },
     {
@@ -30,6 +30,32 @@ const IndustryVisits = () => {
         "Studied their quality control protocols for ensuring product consistency",
         "Observed their effluent treatment systems and environmental compliance measures",
         "Learned about Dr. Gharda's approach to innovation and process improvement"
+      ]
+    },
+    {
+      company: "Ahuja Engineering Services",
+      location: "Hyderabad, Telangana",
+      date: "January 4, 2025",
+      description: "My visit to Ahuja Engineering Services in Hyderabad provided fascinating insights into biogas plant design and operation. This innovative facility specializes in converting biodegradable waste into methane gas, demonstrating sustainable waste-to-energy solutions in action. The process begins with waste collection in specially designed mild-steel tanks equipped with FRP (Fiber Reinforced Plastic) lining to prevent corrosion. These tanks are heated using electric rods to maintain optimal temperature for bacterial activity. The biodegradable waste undergoes a 25-30 day decomposition process, during which microorganisms break down organic matter in the absence of oxygen, producing methane-rich biogas. What impressed me most was their purification system, which removes hydrogen sulfide and moisture from the raw biogas, resulting in purified methane suitable for use as LPG (Liquified Petroleum Gas) or CBG (Compressed Biogas). This visit highlighted how chemical engineering principles are being applied to address waste management challenges while simultaneously creating renewable energy sources.",
+      highlights: [
+        "Studied the design of mild-steel tanks with FRP lining used for anaerobic digestion",
+        "Analyzed the temperature control mechanisms essential for optimal bacterial decomposition",
+        "Examined biogas purification processes for removing hydrogen sulfide and moisture",
+        "Learned about the applications of purified methane as LPG and CBG alternatives",
+        "Understood the environmental impact and sustainability benefits of biogas production"
+      ]
+    },
+    {
+      company: "NFC Effluent Treatment Company",
+      location: "Hyderabad, Telangana",
+      date: "January 4, 2025",
+      description: "Touring the NFC Effluent Treatment Company near the Nuclear Fuel Complex in Hyderabad was an eye-opening experience in industrial waste management and resource recovery. This specialized facility focuses on extracting valuable ammonium nitrate from the effluent generated by the Nuclear Fuel Complex operations. The treatment process begins with a meticulous filtration system that removes suspended solids and impurities from the incoming effluent. What particularly impressed me was their three-layer evaporation system utilizing shell-and-tube heat exchangers, which efficiently concentrates the ammonium nitrate solution. The process continues with a sophisticated particle crushing operation that transforms the concentrated solution into commercially viable ammonium nitrate products. This visit highlighted the dual benefits of effluent treatment: environmental protection through proper waste management and economic gain through resource recovery. It also underscored the technical challenges involved in handling industrial effluents safely and the engineering innovations developed to overcome these challenges. The facility demonstrates how chemical engineering principles can be applied to transform what would otherwise be waste into valuable products.",
+      highlights: [
+        "Examined multi-stage filtration systems for removing suspended solids from industrial effluent",
+        "Analyzed the three-layer evaporation process using shell-and-tube heat exchangers",
+        "Studied the particle crushing operations for ammonium nitrate product formation",
+        "Gained insights into the economic aspects of recovering resources from waste streams",
+        "Understood the environmental compliance challenges in treating complex industrial effluents"
       ]
     },
     {

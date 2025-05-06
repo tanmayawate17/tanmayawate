@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -47,15 +48,15 @@ const Index = () => {
                 <span className="neon-text-blue">Tanmay Awate</span>
               </h1>
               <h2 className="text-xl md:text-2xl font-medium text-gray-400 mb-8">
-                Chemical Engineering Innovator
+                Transforming Ideas into Impact
               </h2>
               <p className="text-gray-300 mb-8 text-lg max-w-lg">
                 A third-year undergraduate at the Institute of Chemical Technology, Mumbai, 
-                driven by a passion for innovation and excellence in the field of chemical engineering.
+                driven by a passion for innovation and excellence in the field of chemical engineering and artificial intelligence.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link to="/projects" className="neon-btn">
-                  Explore My Work
+                <Link to="/skills" className="neon-btn">
+                  Explore My Skills
                   <ArrowRight className="ml-2 h-5 w-5 inline" />
                 </Link>
                 <Link to="/contact" className="px-6 py-2 border-2 border-gray-700 rounded-md text-gray-300 hover:border-white hover:text-white transition-colors duration-300">
@@ -192,60 +193,6 @@ const Index = () => {
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Projects */}
-      <section className="py-24 bg-[#0c0c0c]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-on-scroll">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="text-white">Featured </span>
-              <span className="neon-text-green">Projects</span>
-            </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              Some of my recent work in chemical engineering and digital marketing.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-on-scroll">
-            {/* Project Card 1 */}
-            <div className="neon-card">
-              <h3 className="text-xl font-semibold mb-2 text-white">Chemical Process Simulation</h3>
-              <p className="text-gray-400 mb-4">A comprehensive simulation of chemical processes using DWSIM, focusing on efficiency optimization and sustainable practices.</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="text-xs px-2 py-1 bg-[#1a1a1a] text-gray-400 rounded-md">DWSIM</span>
-                <span className="text-xs px-2 py-1 bg-[#1a1a1a] text-gray-400 rounded-md">Process Engineering</span>
-                <span className="text-xs px-2 py-1 bg-[#1a1a1a] text-gray-400 rounded-md">Simulation</span>
-              </div>
-              <Link to="/projects" className="text-neon-green hover:underline flex items-center text-sm">
-                View project details
-                <ArrowRight className="ml-1 h-3 w-3" />
-              </Link>
-            </div>
-
-            {/* Project Card 2 */}
-            <div className="neon-card">
-              <h3 className="text-xl font-semibold mb-2 text-white">Digital Marketing Campaign</h3>
-              <p className="text-gray-400 mb-4">A comprehensive social media marketing strategy for a startup, focusing on brand awareness and audience engagement.</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="text-xs px-2 py-1 bg-[#1a1a1a] text-gray-400 rounded-md">Digital Marketing</span>
-                <span className="text-xs px-2 py-1 bg-[#1a1a1a] text-gray-400 rounded-md">Social Media</span>
-                <span className="text-xs px-2 py-1 bg-[#1a1a1a] text-gray-400 rounded-md">Analytics</span>
-              </div>
-              <Link to="/projects" className="text-neon-green hover:underline flex items-center text-sm">
-                View project details
-                <ArrowRight className="ml-1 h-3 w-3" />
-              </Link>
-            </div>
-          </div>
-          
-          <div className="text-center mt-12 animate-on-scroll">
-            <Link to="/projects" className="neon-btn">
-              View All Projects
-              <ArrowRight className="ml-2 h-5 w-5 inline" />
-            </Link>
           </div>
         </div>
       </section>
