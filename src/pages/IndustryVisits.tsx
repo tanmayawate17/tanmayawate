@@ -22,7 +22,7 @@ const IndustryVisits = () => {
     {
       company: "Gharda Chemicals Limited",
       location: "Dombivali, Maharashtra",
-      date: "March 2024",
+      date: "April 2025",
       description: "Visiting Gharda Chemicals Limited in Dombivali was a valuable learning opportunity in specialty chemical manufacturing. Founded by Dr. K.H. Gharda, this company is known for its innovative approach to chemical manufacturing processes. The visit covered pesticide manufacturing, polymer production, and the company's R&D facilities. I learned about batch processing methods, quality control protocols, and effluent treatment systems. The company's commitment to research and innovation in developing novel chemical compounds and improving manufacturing processes was particularly inspiring.",
       highlights: [
         "Explored pesticide manufacturing and polymer production processes",
@@ -30,6 +30,19 @@ const IndustryVisits = () => {
         "Studied their quality control protocols for ensuring product consistency",
         "Observed their effluent treatment systems and environmental compliance measures",
         "Learned about Dr. Gharda's approach to innovation and process improvement"
+      ]
+    },
+    {
+      company: "Aarti Industries Limited",
+      location: "Mumbai, Maharashtra",
+      date: "March 2025",
+      description: "The visit to Aarti Industries Limited provided comprehensive insights into integrated chemical manufacturing. As a leading manufacturer of specialty chemicals and pharmaceuticals, the company demonstrates exceptional operational efficiency. I toured their manufacturing facilities for benzene-based intermediates and observed continuous process operations. Their focus on process intensification, safety management, and sustainable practices was evident throughout the facility. I gained valuable knowledge about speciality chemicals manufacturing and the importance of vertical integration in the chemical industry.",
+      highlights: [
+        "Toured manufacturing facilities for benzene-based intermediates",
+        "Observed continuous process operations and reactor design principles",
+        "Learned about process intensification strategies to improve efficiency",
+        "Understood their safety management systems and hazard control measures",
+        "Explored their sustainable practices and waste minimization approaches"
       ]
     },
     {
@@ -56,19 +69,6 @@ const IndustryVisits = () => {
         "Studied the particle crushing operations for ammonium nitrate product formation",
         "Gained insights into the economic aspects of recovering resources from waste streams",
         "Understood the environmental compliance challenges in treating complex industrial effluents"
-      ]
-    },
-    {
-      company: "Aarti Industries Limited",
-      location: "Mumbai, Maharashtra",
-      date: "April 2024",
-      description: "The visit to Aarti Industries Limited provided comprehensive insights into integrated chemical manufacturing. As a leading manufacturer of specialty chemicals and pharmaceuticals, the company demonstrates exceptional operational efficiency. I toured their manufacturing facilities for benzene-based intermediates and observed continuous process operations. Their focus on process intensification, safety management, and sustainable practices was evident throughout the facility. I gained valuable knowledge about speciality chemicals manufacturing and the importance of vertical integration in the chemical industry.",
-      highlights: [
-        "Toured manufacturing facilities for benzene-based intermediates",
-        "Observed continuous process operations and reactor design principles",
-        "Learned about process intensification strategies to improve efficiency",
-        "Understood their safety management systems and hazard control measures",
-        "Explored their sustainable practices and waste minimization approaches"
       ]
     }
   ];
@@ -110,11 +110,11 @@ const IndustryVisits = () => {
                       <Factory className="h-16 w-16 text-neon-blue mx-auto mb-4" />
                       <h3 className="text-xl font-semibold text-white mb-2">{visit.company}</h3>
                       <div className="flex items-center justify-center text-gray-400 mb-1">
-                        <MapPin className="h-4 w-4 mr-2" />
+                        <MapPin className="h-4 w-4 mr-2 flex-shrink-0" />
                         <span>{visit.location}</span>
                       </div>
                       <div className="flex items-center justify-center text-gray-400 mt-3">
-                        <Calendar className="h-4 w-4 mr-2" />
+                        <Calendar className="h-4 w-4 mr-2 flex-shrink-0" />
                         <span>{visit.date}</span>
                       </div>
                     </div>

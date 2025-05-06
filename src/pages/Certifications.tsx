@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Award } from 'lucide-react';
 import Navbar from '@/components/ui/navbar';
@@ -8,29 +9,29 @@ const Certifications = () => {
     {
       title: "Digital Marketing Strategy",
       provider: "HubSpot Academy",
-      date: "October 2024",
+      date: "May 2025",
       description: "Comprehensive training on digital marketing strategy planning, execution, and optimization for business growth.",
       skills: ["Marketing Strategy", "Digital Channels", "Audience Targeting", "Campaign Planning"],
       color: "pink",
-      image: "/lovable-uploads/f7a2c5c2-0d92-486a-9136-a08d8069bb9b.png"
+      showImage: false
     },
     {
       title: "Social Media Marketing",
       provider: "HubSpot Academy",
-      date: "September 2024",
+      date: "May 2025",
       description: "Advanced course on social media platform optimization, content creation, and engagement strategies.",
       skills: ["Content Creation", "Community Management", "Analytics", "Platform Strategy"],
       color: "blue",
-      image: "/lovable-uploads/f7a2c5c2-0d92-486a-9136-a08d8069bb9b.png"
+      showImage: false
     },
     {
       title: "Content Marketing",
       provider: "HubSpot Academy",
-      date: "August 2024",
+      date: "May 2025",
       description: "Specialized training on creating and optimizing content for maximum engagement and conversion.",
       skills: ["Content Strategy", "SEO Writing", "Content Distribution", "Audience Analysis"],
       color: "green",
-      image: "/lovable-uploads/f7a2c5c2-0d92-486a-9136-a08d8069bb9b.png"
+      showImage: false
     },
     {
       title: "Career Essentials in Generative AI",
@@ -80,7 +81,7 @@ const Certifications = () => {
     {
       title: "Simulink OnRamp",
       provider: "MathWorks",
-      date: "2023",
+      date: "December 2024",
       description: "Specialized training on Simulink for modeling, simulating, and analyzing dynamic systems.",
       skills: ["Simulink Modeling", "Dynamic Systems", "Simulation", "Control Systems"],
       color: "blue"
@@ -124,12 +125,12 @@ const Certifications = () => {
                   className={`bg-[#0A0A0A] border border-[#333] rounded-lg p-8 transition-all duration-300 hover:shadow-neon-${cert.color} group`}
                 >
                   <div className="flex flex-col space-y-6">
-                    {cert.image && (
-                      <div className="w-full h-56 md:h-64 rounded-md overflow-hidden border border-[#333] group-hover:border-neon-blue transition-all duration-300">
+                    {cert.image && !cert.showImage === false && (
+                      <div className="w-full h-64 md:h-72 rounded-md overflow-hidden border border-[#333] group-hover:border-neon-blue transition-all duration-300">
                         <img 
                           src={cert.image} 
                           alt={`${cert.title} Certificate`} 
-                          className="w-full h-full object-contain p-2 hover:scale-105 transition-transform duration-300"
+                          className="w-full h-full object-contain p-4 hover:scale-105 transition-transform duration-300"
                         />
                       </div>
                     )}

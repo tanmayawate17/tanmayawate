@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Code, Database, PenTool, ChartBar, FileText } from 'lucide-react';
+import { Code, Database, PenTool, ChartBar, FileText, Users } from 'lucide-react';
 import Navbar from '@/components/ui/navbar';
 import Footer from '@/components/ui/footer';
 import SkillCard from '@/components/skill-card';
@@ -61,13 +60,31 @@ const Skills = () => {
     {
       title: 'Finance',
       icon: ChartBar,
-      description: 'Stock market analysis and financial planning',
+      description: 'Financial planning and stock market analysis',
       color: 'pink'
     },
     {
       title: 'Content Creation',
       icon: FileText,
       description: 'Development of engaging digital content',
+      color: 'pink'
+    },
+    {
+      title: 'Social Media Management',
+      icon: FileText,
+      description: 'Platform strategy and community engagement',
+      color: 'pink'
+    },
+    {
+      title: 'Teamwork',
+      icon: Users,
+      description: 'Collaborative problem-solving and communication',
+      color: 'pink'
+    },
+    {
+      title: 'Strong Work Ethic',
+      icon: ChartBar,
+      description: 'Dedication, reliability, and commitment to excellence',
       color: 'pink'
     }
   ];
