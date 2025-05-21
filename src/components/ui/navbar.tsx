@@ -48,8 +48,8 @@ const Navbar = () => {
       className={cn(
         'fixed w-full z-50 transition-all duration-300',
         scrolled 
-          ? 'bg-[#0A0A0A]/90 backdrop-blur-md py-3 shadow-md' 
-          : 'bg-transparent py-5'
+          ? 'bg-[#0A0A0A]/95 backdrop-blur-md py-3 shadow-md' 
+          : 'bg-[#0A0A0A]/90 backdrop-blur-sm py-4'
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -94,13 +94,13 @@ const Navbar = () => {
       {/* Mobile Navigation Menu */}
       <div
         className={cn(
-          'md:hidden fixed inset-0 bg-[#0A0A0A]/98 backdrop-blur-lg transition-all duration-300 ease-in-out z-40',
+          'md:hidden fixed inset-0 bg-[#000000]/98 backdrop-blur-lg transition-all duration-300 ease-in-out z-40',
           isOpen
             ? 'opacity-100 translate-x-0'
             : 'opacity-0 -translate-x-full pointer-events-none'
         )}
       >
-        <div className="flex flex-col items-center justify-center h-full space-y-8 py-10 px-6">
+        <div className="flex flex-col items-center justify-center h-full space-y-6 py-10 px-6">
           {navLinks.map((link) => (
             <Link
               key={link.path}

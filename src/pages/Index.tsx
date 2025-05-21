@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, GraduationCap, Briefcase, Award } from 'lucide-react';
 import Navbar from '@/components/ui/navbar';
 import Footer from '@/components/ui/footer';
 
@@ -192,6 +192,137 @@ const Index = () => {
                   <ArrowRight className="ml-1 h-3 w-3" />
                 </Link>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Education Section */}
+      <section className="py-24 bg-[#0c0c0c]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 animate-on-scroll">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="text-white">My </span>
+              <span className="neon-text-blue">Education</span>
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Academic journey and educational qualifications
+            </p>
+          </div>
+          
+          <div className="max-w-3xl mx-auto animate-on-scroll">
+            <div className="bg-[#0A0A0A] border border-[#222] rounded-lg p-8 transition-all duration-300 hover:shadow-neon-blue">
+              <div className="flex items-start">
+                <GraduationCap className="h-12 w-12 text-neon-blue mr-6 flex-shrink-0" />
+                <div>
+                  <h3 className="text-xl font-semibold mb-2 text-white">B.Tech Chemical Engineering</h3>
+                  <p className="text-neon-blue mb-2">Institute of Chemical Technology, Mumbai</p>
+                  <p className="text-gray-400">2023–Present, Third Year</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-6 text-center">
+              <Link to="/education" className="inline-flex items-center text-neon-blue hover:underline">
+                View complete education details
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section className="py-24 bg-[#0A0A0A]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 animate-on-scroll">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="text-white">My </span>
+              <span className="neon-text-pink">Experience</span>
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Professional journey and industry experience
+            </p>
+          </div>
+          
+          <div className="max-w-3xl mx-auto space-y-6 animate-on-scroll">
+            <div className="bg-[#0c0c0c] border border-[#222] rounded-lg p-8 transition-all duration-300 hover:shadow-neon-pink">
+              <div className="flex items-start">
+                <Briefcase className="h-12 w-12 text-neon-pink mr-6 flex-shrink-0" />
+                <div>
+                  <h3 className="text-xl font-semibold mb-2 text-white">CFD Research Internship</h3>
+                  <p className="text-neon-pink mb-2">ICT Mumbai, under Prof. Yogesh Shinde</p>
+                  <p className="text-gray-400 mb-4">May 2025–Present</p>
+                  <p className="text-gray-300">Researching impeller performance in CSTRs using ANSYS Fluent, aiming to publish a paper.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-[#0c0c0c] border border-[#222] rounded-lg p-8 transition-all duration-300 hover:shadow-neon-pink">
+              <div className="flex items-start">
+                <Briefcase className="h-12 w-12 text-neon-pink mr-6 flex-shrink-0" />
+                <div>
+                  <h3 className="text-xl font-semibold mb-2 text-white">ICT Skin Donation Community Project</h3>
+                  <p className="text-neon-pink mb-2">ICT Mumbai</p>
+                  <p className="text-gray-400 mb-4">May 2025–Present</p>
+                  <p className="text-gray-300">Raising awareness for skin donation, supporting medical advancements.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-[#0c0c0c] border border-[#222] rounded-lg p-8 transition-all duration-300 hover:shadow-neon-pink">
+              <div className="flex items-start">
+                <Briefcase className="h-12 w-12 text-neon-pink mr-6 flex-shrink-0" />
+                <div>
+                  <h3 className="text-xl font-semibold mb-2 text-white">Industry Visits</h3>
+                  <p className="text-neon-pink mb-2">Various Chemical Industries</p>
+                  <p className="text-gray-400 mb-4">2024–2025</p>
+                  <p className="text-gray-300">Toured Gharda Chemicals, Ahuja Engineering Services, NFC Effluent Treatment, Reliance Technology Center, Aarti Industries, gaining insights into chemical processes.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-6 text-center">
+              <Link to="/experience" className="inline-flex items-center text-neon-pink hover:underline">
+                View all experience
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section className="py-24 bg-[#0c0c0c]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 animate-on-scroll">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="text-white">My </span>
+              <span className="neon-text-green">Certifications</span>
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Professional certifications and courses
+            </p>
+          </div>
+          
+          <div className="max-w-3xl mx-auto animate-on-scroll">
+            <div className="bg-[#0A0A0A] border border-[#222] rounded-lg p-8 transition-all duration-300 hover:shadow-neon-green">
+              <div className="flex items-start">
+                <Award className="h-12 w-12 text-neon-green mr-6 flex-shrink-0" />
+                <div>
+                  <h3 className="text-xl font-semibold mb-2 text-white">HubSpot Digital Marketing Certifications</h3>
+                  <p className="text-neon-green mb-2">HubSpot Academy</p>
+                  <p className="text-gray-400 mb-4">2025</p>
+                  <p className="text-gray-300">Completed courses in SEO, content marketing, and social media strategy.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-6 text-center">
+              <Link to="/certifications" className="inline-flex items-center text-neon-green hover:underline">
+                View all certifications
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </div>
           </div>
         </div>

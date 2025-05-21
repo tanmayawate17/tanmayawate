@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Factory, CheckCircle, Calendar, MapPin } from 'lucide-react';
+import { Factory, CheckCircle, Calendar, MapPin, ExternalLink } from 'lucide-react';
 import Navbar from '@/components/ui/navbar';
 import Footer from '@/components/ui/footer';
 
@@ -143,6 +143,19 @@ const IndustryVisits = () => {
                 </div>
               </div>
             ))}
+            
+            {/* Notion Link Button */}
+            <div className="flex justify-center my-12">
+              <a 
+                href="https://www.notion.so/Industrial-Visits-1740f6f77d3b80f88e28f5a09b30fb04?pvs=4" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="neon-btn flex items-center gap-2 px-6 py-3 text-base"
+              >
+                View Detailed Industry Visits
+                <ExternalLink className="h-5 w-5" />
+              </a>
+            </div>
             
             {/* Value of Industry Visits */}
             <div className="animate-fade-in">
