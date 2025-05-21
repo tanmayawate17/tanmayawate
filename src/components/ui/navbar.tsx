@@ -36,9 +36,9 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Skills', path: '/skills' },
-    { name: 'Certifications', path: '/certifications' },
     { name: 'Education', path: '/education' },
     { name: 'Experience', path: '/experience' },
+    { name: 'Certifications', path: '/certifications' },
     { name: 'Industry Visits', path: '/industry-visits' },
     { name: 'Contact', path: '/contact' },
   ];
@@ -83,9 +83,9 @@ const Navbar = () => {
             aria-label="Toggle menu"
           >
             {isOpen ? (
-              <X className="h-6 w-6 text-neon-blue" />
+              <X className="h-6 w-6 text-[#00FFDD]" />
             ) : (
-              <Menu className="h-6 w-6" />
+              <Menu className="h-6 w-6 text-[#00FFDD]" />
             )}
           </button>
         </div>
@@ -94,7 +94,7 @@ const Navbar = () => {
       {/* Mobile Navigation Menu */}
       <div
         className={cn(
-          'md:hidden fixed inset-0 bg-[#000000]/98 backdrop-blur-lg transition-all duration-300 ease-in-out z-40',
+          'md:hidden fixed inset-0 bg-black/80 backdrop-blur-lg transition-all duration-300 ease-in-out z-40',
           isOpen
             ? 'opacity-100 translate-x-0'
             : 'opacity-0 -translate-x-full pointer-events-none'
@@ -106,10 +106,10 @@ const Navbar = () => {
               key={link.path}
               to={link.path}
               className={cn(
-                'text-xl font-medium transition-all duration-300 hover:text-neon-blue w-full text-center py-2',
+                'text-xl font-medium transition-all duration-300 w-full text-center py-5',
                 location.pathname === link.path
-                  ? 'text-neon-blue'
-                  : 'text-gray-300'
+                  ? 'text-[#00FFDD] font-semibold'
+                  : 'text-white hover:text-[#00FFDD]'
               )}
               onClick={() => setIsOpen(false)}
             >
