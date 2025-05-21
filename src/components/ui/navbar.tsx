@@ -94,19 +94,19 @@ const Navbar = () => {
       {/* Mobile Navigation Menu */}
       <div
         className={cn(
-          'md:hidden fixed inset-0 bg-black/80 backdrop-blur-lg transition-all duration-300 ease-in-out z-40',
+          'md:hidden fixed inset-0 bg-black/90 backdrop-blur-md transition-all duration-300 ease-in-out z-40',
           isOpen
-            ? 'opacity-100 translate-x-0'
-            : 'opacity-0 -translate-x-full pointer-events-none'
+            ? 'opacity-100 translate-y-0'
+            : 'opacity-0 -translate-y-full pointer-events-none'
         )}
       >
-        <div className="flex flex-col items-center justify-center h-full space-y-6 py-10 px-6">
+        <div className="flex flex-col items-center justify-center h-full space-y-8 py-10 px-6">
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
               className={cn(
-                'text-xl font-medium transition-all duration-300 w-full text-center py-5',
+                'text-xl font-medium transition-all duration-300 py-5 px-10 text-center w-full',
                 location.pathname === link.path
                   ? 'text-[#00FFDD] font-semibold'
                   : 'text-white hover:text-[#00FFDD]'
