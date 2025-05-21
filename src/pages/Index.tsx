@@ -215,7 +215,7 @@ const Index = () => {
               <div className="flex items-start">
                 <GraduationCap className="h-12 w-12 text-neon-blue mr-6 flex-shrink-0" />
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-white">B.Tech Chemical Engineering</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-white">B.E Chemical Engineering</h3>
                   <p className="text-neon-blue mb-2">Institute of Chemical Technology, Mumbai</p>
                   <p className="text-gray-400">2023–Present, Third Year</p>
                 </div>
