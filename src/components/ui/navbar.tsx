@@ -28,20 +28,48 @@ const Navbar = () => {
     setIsOpen(false);
   }, [location]);
 
+  // Enable smooth scrolling
+  useEffect(() => {
+    // Check if there's a hash in the URL when component mounts or location changes
+    if (location.hash) {
+      // Delay scrolling slightly to ensure DOM is ready
+      setTimeout(() => {
+        const id = location.hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [location]);
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Skills', path: '/skills' },
-    { name: 'Education', path: '/education' },
-    { name: 'Experience', path: '/experience' },
-    { name: 'Certifications', path: '/certifications' },
+    { name: 'Home', path: '/#home' },
+    { name: 'About', path: '/#about' },
+    { name: 'Skills', path: '/#skills' },
+    { name: 'Education', path: '/#education' },
+    { name: 'Experience', path: '/#experience' },
+    { name: 'Certifications', path: '/#certifications' },
     { name: 'Industry Visits', path: '/industry-visits' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Contact', path: '/#contact' },
   ];
+
+  const handleNavClick = (e, path) => {
+    // Only handle hash links on the same page
+    if (path.startsWith('/#') && location.pathname === '/') {
+      e.preventDefault();
+      const id = path.replace('/#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+      setIsOpen(false);
+    }
+  };
 
   return (
     <nav
@@ -64,9 +92,11 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
+                onClick={(e) => handleNavClick(e, link.path)}
                 className={cn(
                   'text-sm font-medium transition-all duration-300 hover:text-neon-blue whitespace-nowrap',
-                  location.pathname === link.path
+                  (location.pathname === '/' && location.hash === link.path.replace('/', '')) || 
+                  (location.pathname === link.path && !link.path.includes('#'))
                     ? 'text-neon-blue'
                     : 'text-gray-300'
                 )}
@@ -105,13 +135,14 @@ const Navbar = () => {
             <Link
               key={link.path}
               to={link.path}
+              onClick={(e) => handleNavClick(e, link.path)}
               className={cn(
                 'text-xl font-medium transition-all duration-300 py-5 px-5 text-center w-full',
-                location.pathname === link.path
+                (location.pathname === '/' && location.hash === link.path.replace('/', '')) || 
+                (location.pathname === link.path && !link.path.includes('#'))
                   ? 'text-[#00FFDD] font-semibold'
                   : 'text-white hover:text-[#00FFDD] hover:shadow-[0_0_5px_#00FFDD]'
               )}
-              onClick={() => setIsOpen(false)}
             >
               {link.name}
             </Link>

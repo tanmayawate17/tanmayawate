@@ -5,6 +5,25 @@ import { ArrowRight, GraduationCap, Briefcase, Award } from 'lucide-react';
 import Navbar from '@/components/ui/navbar';
 import Footer from '@/components/ui/footer';
 
+// Add global styles for smooth scrolling
+const globalStyle = document.createElement('style');
+globalStyle.innerHTML = `
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  section {
+    scroll-margin-top: 80px; /* Adjust based on navbar height */
+  }
+  
+  @media (max-width: 768px) {
+    section {
+      scroll-margin-top: 70px;
+    }
+  }
+`;
+document.head.appendChild(globalStyle);
+
 const Index = () => {
   useEffect(() => {
     // Add animation class to elements when they come into view
@@ -33,7 +52,7 @@ const Index = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col justify-center relative overflow-hidden">
+      <section id="home" className="min-h-screen flex flex-col justify-center relative overflow-hidden">
         {/* Background elements - abstract shapes */}
         <div className="absolute inset-0 z-0 opacity-20">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-neon-blue blur-[100px]"></div>
@@ -55,11 +74,11 @@ const Index = () => {
                 driven by a passion for innovation and excellence in the field of chemical engineering and artificial intelligence.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link to="/skills" className="neon-btn">
+                <Link to="/#skills" className="neon-btn">
                   Explore My Skills
                   <ArrowRight className="ml-2 h-5 w-5 inline" />
                 </Link>
-                <Link to="/contact" className="px-6 py-2 border-2 border-gray-700 rounded-md text-gray-300 hover:border-white hover:text-white transition-colors duration-300">
+                <Link to="/#contact" className="px-6 py-2 border-2 border-gray-700 rounded-md text-gray-300 hover:border-white hover:text-white transition-colors duration-300">
                   Get In Touch
                 </Link>
               </div>
@@ -86,7 +105,7 @@ const Index = () => {
       </section>
 
       {/* Brief About Section */}
-      <section className="py-24 bg-[#0c0c0c]">
+      <section id="about" className="py-24 bg-[#0c0c0c]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center animate-on-scroll">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
@@ -106,7 +125,7 @@ const Index = () => {
       </section>
 
       {/* Featured Skills Section */}
-      <section className="py-24 bg-[#0A0A0A]">
+      <section id="skills" className="py-24 bg-[#0A0A0A]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-on-scroll">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -198,7 +217,7 @@ const Index = () => {
       </section>
 
       {/* Education Section */}
-      <section className="py-24 bg-[#0c0c0c]">
+      <section id="education" className="py-24 bg-[#0c0c0c]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-on-scroll">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -233,7 +252,7 @@ const Index = () => {
       </section>
 
       {/* Experience Section */}
-      <section className="py-24 bg-[#0A0A0A]">
+      <section id="experience" className="py-24 bg-[#0A0A0A]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-on-scroll">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -293,7 +312,7 @@ const Index = () => {
       </section>
 
       {/* Certifications Section */}
-      <section className="py-24 bg-[#0c0c0c]">
+      <section id="certifications" className="py-24 bg-[#0c0c0c]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-on-scroll">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -329,7 +348,7 @@ const Index = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-24 bg-[#0A0A0A] relative overflow-hidden">
+      <section id="contact" className="py-24 bg-[#0A0A0A] relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
           <div className="absolute top-1/3 right-1/4 w-96 h-96 rounded-full bg-neon-pink blur-[100px]"></div>
           <div className="absolute bottom-1/3 left-1/4 w-96 h-96 rounded-full bg-neon-blue blur-[100px]"></div>
