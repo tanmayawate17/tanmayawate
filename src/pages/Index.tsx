@@ -1,7 +1,6 @@
-
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, GraduationCap, Briefcase, Award, Industry } from 'lucide-react';
+import { ArrowRight, GraduationCap, Briefcase, Award, Factory } from 'lucide-react';
 import Navbar from '@/components/ui/navbar';
 import Footer from '@/components/ui/footer';
 
@@ -369,7 +368,7 @@ const Index = () => {
             <div className="neon-border p-6 bg-[#0c0c0c] rounded-lg transition-all duration-300 hover:shadow-neon-blue animate-on-scroll">
               <div className="flex items-start gap-4">
                 <div className="bg-[#111] p-3 rounded-full border border-[#333]">
-                  <Industry className="h-6 w-6 text-neon-blue" />
+                  <Factory className="h-6 w-6 text-neon-blue" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white mb-2">Industry Visits (2024–2025)</h3>
