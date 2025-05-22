@@ -32,15 +32,27 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const scrollToSection = (id) => {
+    setIsOpen(false);
+    
+    // Check if we're on the homepage
+    if (location.pathname === '/') {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About Me', path: '/about' },
-    { name: 'Skills', path: '/skills' },
-    { name: 'Certifications', path: '/certifications' },
-    { name: 'Education', path: '/education' },
-    { name: 'Experience', path: '/experience' },
-    { name: 'Industry Visits', path: '/industry-visits' },
-    { name: 'Contact Me', path: '/contact' },
+    { name: 'Home', path: '/', id: 'home' },
+    { name: 'About Me', path: '/about', id: 'about' },
+    { name: 'Skills', path: '/skills', id: 'skills' },
+    { name: 'Education', path: '/education', id: 'education' },
+    { name: 'Experience', path: '/experience', id: 'experience' },
+    { name: 'Certifications', path: '/certifications', id: 'certifications' },
+    { name: 'Industry Visits', path: '/industry-visits', id: 'industry-visits' },
+    { name: 'Contact Me', path: '/contact', id: 'contact' },
   ];
 
   return (
@@ -64,6 +76,12 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
+                onClick={(e) => {
+                  if (location.pathname === '/' && link.id) {
+                    e.preventDefault();
+                    scrollToSection(link.id);
+                  }
+                }}
                 className={cn(
                   'text-sm font-medium transition-all duration-300 hover:text-neon-blue whitespace-nowrap',
                   location.pathname === link.path
@@ -105,13 +123,19 @@ const Navbar = () => {
             <Link
               key={link.path}
               to={link.path}
+              onClick={(e) => {
+                if (location.pathname === '/' && link.id) {
+                  e.preventDefault();
+                  scrollToSection(link.id);
+                }
+                setIsOpen(false);
+              }}
               className={cn(
                 'text-xl font-medium transition-all duration-300 hover:text-neon-blue w-full text-center py-2',
                 location.pathname === link.path
                   ? 'text-neon-blue'
                   : 'text-gray-300'
               )}
-              onClick={() => setIsOpen(false)}
             >
               {link.name}
             </Link>
