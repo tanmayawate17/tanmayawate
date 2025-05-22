@@ -34,13 +34,13 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
+    { name: 'About Me', path: '/about' },
     { name: 'Skills', path: '/skills' },
     { name: 'Certifications', path: '/certifications' },
     { name: 'Education', path: '/education' },
     { name: 'Experience', path: '/experience' },
     { name: 'Industry Visits', path: '/industry-visits' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Contact Me', path: '/contact' },
   ];
 
   return (

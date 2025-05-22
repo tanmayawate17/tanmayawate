@@ -40,8 +40,16 @@
     background-color: #0A0A0A;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading font-bold;
+  }
+
+  section {
+    scroll-margin-top: 80px;
   }
 }
 
