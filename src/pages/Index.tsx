@@ -1,28 +1,9 @@
 
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, GraduationCap, Briefcase, Award } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Navbar from '@/components/ui/navbar';
 import Footer from '@/components/ui/footer';
-
-// Add global styles for smooth scrolling
-const globalStyle = document.createElement('style');
-globalStyle.innerHTML = `
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  section {
-    scroll-margin-top: 80px; /* Adjust based on navbar height */
-  }
-  
-  @media (max-width: 768px) {
-    section {
-      scroll-margin-top: 70px;
-    }
-  }
-`;
-document.head.appendChild(globalStyle);
 
 const Index = () => {
   useEffect(() => {
@@ -52,7 +33,7 @@ const Index = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex flex-col justify-center relative overflow-hidden">
+      <section className="min-h-screen flex flex-col justify-center relative overflow-hidden">
         {/* Background elements - abstract shapes */}
         <div className="absolute inset-0 z-0 opacity-20">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-neon-blue blur-[100px]"></div>
@@ -74,11 +55,11 @@ const Index = () => {
                 driven by a passion for innovation and excellence in the field of chemical engineering and artificial intelligence.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link to="/#skills" className="neon-btn">
+                <Link to="/skills" className="neon-btn">
                   Explore My Skills
                   <ArrowRight className="ml-2 h-5 w-5 inline" />
                 </Link>
-                <Link to="/#contact" className="px-6 py-2 border-2 border-gray-700 rounded-md text-gray-300 hover:border-white hover:text-white transition-colors duration-300">
+                <Link to="/contact" className="px-6 py-2 border-2 border-gray-700 rounded-md text-gray-300 hover:border-white hover:text-white transition-colors duration-300">
                   Get In Touch
                 </Link>
               </div>
@@ -105,7 +86,7 @@ const Index = () => {
       </section>
 
       {/* Brief About Section */}
-      <section id="about" className="py-24 bg-[#0c0c0c]">
+      <section className="py-24 bg-[#0c0c0c]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center animate-on-scroll">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
@@ -125,7 +106,7 @@ const Index = () => {
       </section>
 
       {/* Featured Skills Section */}
-      <section id="skills" className="py-24 bg-[#0A0A0A]">
+      <section className="py-24 bg-[#0A0A0A]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-on-scroll">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -216,139 +197,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Education Section */}
-      <section id="education" className="py-24 bg-[#0c0c0c]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-on-scroll">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="text-white">My </span>
-              <span className="neon-text-blue">Education</span>
-            </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              Academic journey and educational qualifications
-            </p>
-          </div>
-          
-          <div className="max-w-3xl mx-auto animate-on-scroll">
-            <div className="bg-[#0A0A0A] border border-[#222] rounded-lg p-8 transition-all duration-300 hover:shadow-neon-blue">
-              <div className="flex items-start">
-                <GraduationCap className="h-12 w-12 text-neon-blue mr-6 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 text-white">B.E Chemical Engineering</h3>
-                  <p className="text-neon-blue mb-2">Institute of Chemical Technology, Mumbai</p>
-                  <p className="text-gray-400">2023–Present, Third Year</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="mt-6 text-center">
-              <Link to="/education" className="inline-flex items-center text-neon-blue hover:underline">
-                View complete education details
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Experience Section */}
-      <section id="experience" className="py-24 bg-[#0A0A0A]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-on-scroll">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="text-white">My </span>
-              <span className="neon-text-pink">Experience</span>
-            </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              Professional journey and industry experience
-            </p>
-          </div>
-          
-          <div className="max-w-3xl mx-auto space-y-6 animate-on-scroll">
-            <div className="bg-[#0c0c0c] border border-[#222] rounded-lg p-8 transition-all duration-300 hover:shadow-neon-pink">
-              <div className="flex items-start">
-                <Briefcase className="h-12 w-12 text-neon-pink mr-6 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 text-white">CFD Research Internship</h3>
-                  <p className="text-neon-pink mb-2">ICT Mumbai, under Prof. Yogesh Shinde</p>
-                  <p className="text-gray-400 mb-4">May 2025–Present</p>
-                  <p className="text-gray-300">Researching impeller performance in CSTRs using ANSYS Fluent, aiming to publish a paper.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-[#0c0c0c] border border-[#222] rounded-lg p-8 transition-all duration-300 hover:shadow-neon-pink">
-              <div className="flex items-start">
-                <Briefcase className="h-12 w-12 text-neon-pink mr-6 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 text-white">ICT Skin Donation Community Project</h3>
-                  <p className="text-neon-pink mb-2">ICT Mumbai</p>
-                  <p className="text-gray-400 mb-4">May 2025–Present</p>
-                  <p className="text-gray-300">Raising awareness for skin donation, supporting medical advancements.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-[#0c0c0c] border border-[#222] rounded-lg p-8 transition-all duration-300 hover:shadow-neon-pink">
-              <div className="flex items-start">
-                <Briefcase className="h-12 w-12 text-neon-pink mr-6 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 text-white">Industry Visits</h3>
-                  <p className="text-neon-pink mb-2">Various Chemical Industries</p>
-                  <p className="text-gray-400 mb-4">2024–2025</p>
-                  <p className="text-gray-300">Toured Gharda Chemicals, Ahuja Engineering Services, NFC Effluent Treatment, Reliance Technology Center, Aarti Industries, gaining insights into chemical processes.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="mt-6 text-center">
-              <Link to="/experience" className="inline-flex items-center text-neon-pink hover:underline">
-                View all experience
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Certifications Section */}
-      <section id="certifications" className="py-24 bg-[#0c0c0c]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-on-scroll">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="text-white">My </span>
-              <span className="neon-text-green">Certifications</span>
-            </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              Professional certifications and courses
-            </p>
-          </div>
-          
-          <div className="max-w-3xl mx-auto animate-on-scroll">
-            <div className="bg-[#0A0A0A] border border-[#222] rounded-lg p-8 transition-all duration-300 hover:shadow-neon-green">
-              <div className="flex items-start">
-                <Award className="h-12 w-12 text-neon-green mr-6 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 text-white">HubSpot Digital Marketing Certifications</h3>
-                  <p className="text-neon-green mb-2">HubSpot Academy</p>
-                  <p className="text-gray-400 mb-4">2025</p>
-                  <p className="text-gray-300">Completed courses in SEO, content marketing, and social media strategy.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="mt-6 text-center">
-              <Link to="/certifications" className="inline-flex items-center text-neon-green hover:underline">
-                View all certifications
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Call to Action */}
-      <section id="contact" className="py-24 bg-[#0A0A0A] relative overflow-hidden">
+      <section className="py-24 bg-[#0A0A0A] relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
           <div className="absolute top-1/3 right-1/4 w-96 h-96 rounded-full bg-neon-pink blur-[100px]"></div>
           <div className="absolute bottom-1/3 left-1/4 w-96 h-96 rounded-full bg-neon-blue blur-[100px]"></div>
