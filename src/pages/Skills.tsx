@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { Code, Database, PenTool, ChartBar, FileText, Users } from 'lucide-react';
+import { Code, Database, PenTool, ChartBar, FileText, Users, Settings } from 'lucide-react';
 import Navbar from '@/components/ui/navbar';
 import Footer from '@/components/ui/footer';
 import SkillCard from '@/components/skill-card';
@@ -34,6 +35,18 @@ const Skills = () => {
       title: 'DWSIM',
       icon: Database,
       description: 'Chemical process simulation',
+      color: 'blue'
+    },
+    {
+      title: 'Ansys Fluent',
+      icon: Settings,
+      description: 'Advanced computational fluid dynamics simulation',
+      color: 'blue'
+    },
+    {
+      title: 'Computational Fluid Dynamics',
+      icon: Settings,
+      description: 'Flow analysis and heat transfer modeling',
       color: 'blue'
     },
     {
@@ -140,7 +153,7 @@ const Skills = () => {
               <span className="neon-text-blue">Skills</span>
             </h2>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 animate-fade-in">
               {technicalSkills.map((skill, index) => (
                 <SkillCard
                   key={index}
