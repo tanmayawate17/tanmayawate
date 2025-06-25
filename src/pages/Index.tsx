@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, GraduationCap, Briefcase, Award, Factory } from 'lucide-react';
@@ -66,7 +67,7 @@ const Index = () => {
             <div className="flex justify-center">
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-[#222] shadow-xl">
                 <img 
-                  src="/lovable-uploads/f7a2c5c2-0d92-486a-9136-a08d8069bb9b.png" 
+                  src="/lovable-uploads/60dcd249-b347-4f5d-949c-360e7dde9545.png" 
                   alt="Tanmay Awate" 
                   className="w-full h-full object-cover"
                 />
@@ -275,8 +276,8 @@ const Index = () => {
                   <div>
                     <h3 className="text-lg font-bold text-white mb-1">ICT Skin Donation Community Project</h3>
                     <p className="text-neon-pink font-medium">Social Media Manager</p>
-                    <p className="text-gray-400 text-sm mt-1">May 2025–Present</p>
-                    <p className="text-gray-400 mt-3">Managing social media campaigns and outreach activities for skin donation awareness.</p>
+                    <p className="text-gray-400 text-sm mt-1">February 2025–May 2025</p>
+                    <p className="text-gray-400 mt-3">Managed social media campaigns and outreach activities for skin donation awareness.</p>
                   </div>
                 </div>
               </div>

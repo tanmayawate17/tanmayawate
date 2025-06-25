@@ -12,7 +12,7 @@ const Contact = () => {
     subject: '',
     message: '',
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitting, setIsSubmitting = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -259,32 +259,6 @@ const Contact = () => {
                     </a>
                   </div>
                   <div className="absolute -bottom-24 -right-24 w-48 h-48 bg-neon-pink rounded-full opacity-5 group-hover:opacity-10 transition-opacity duration-300"></div>
-                </div>
-                
-                {/* Location Map */}
-                <div className="bg-[#0A0A0A] border border-[#333] rounded-lg overflow-hidden h-60 relative">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center p-6">
-                      <MapPin className="h-10 w-10 text-neon-blue mx-auto mb-3" />
-                      <h3 className="text-lg font-medium text-white mb-1">Mumbai, India</h3>
-                      <p className="text-gray-400 text-sm">Institute of Chemical Technology</p>
-                    </div>
-                  </div>
-                  {/* Add a pulsing dot to simulate a map location */}
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <div className="w-4 h-4 bg-neon-blue rounded-full relative">
-                      <div className="absolute inset-0 bg-neon-blue rounded-full animate-ping opacity-75"></div>
-                    </div>
-                  </div>
-                  {/* Simulated map grid lines */}
-                  <div className="absolute inset-0 grid grid-cols-6 grid-rows-6">
-                    {Array.from({ length: 6 }).map((_, i) => (
-                      <div key={`h-${i}`} className="w-full h-px bg-[#222]" style={{ gridRow: i + 1 }}></div>
-                    ))}
-                    {Array.from({ length: 6 }).map((_, i) => (
-                      <div key={`v-${i}`} className="h-full w-px bg-[#222]" style={{ gridColumn: i + 1 }}></div>
-                    ))}
-                  </div>
                 </div>
               </div>
             </div>

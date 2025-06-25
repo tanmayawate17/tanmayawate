@@ -42,7 +42,7 @@ const handler = async (req: Request): Promise<Response> => {
       throw new Error('Failed to store message');
     }
 
-    // Send email using Resend
+    // Send email using Resend with improved deliverability
     const resendApiKey = Deno.env.get("RESEND_API_KEY");
     if (!resendApiKey) {
       throw new Error('Resend API key not configured');
@@ -55,19 +55,42 @@ const handler = async (req: Request): Promise<Response> => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'Portfolio Contact <onboarding@resend.dev>',
+        from: 'Tanmay Awate Portfolio <noreply@resend.dev>',
         to: ['tanmayawate0017@gmail.com'],
+        reply_to: email,
         subject: `Portfolio Contact: ${subject}`,
         html: `
-          <h2>New Contact Form Message</h2>
-          <p><strong>From:</strong> ${name} (${email})</p>
-          <p><strong>Subject:</strong> ${subject}</p>
-          <div>
-            <strong>Message:</strong>
-            <p>${message.replace(/\n/g, '<br>')}</p>
-          </div>
-          <hr>
-          <p><em>This message was sent from your portfolio contact form.</em></p>
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>New Contact Form Message</title>
+          </head>
+          <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 10px; color: white; text-align: center; margin-bottom: 20px;">
+              <h1 style="margin: 0; font-size: 24px;">New Contact Message</h1>
+              <p style="margin: 5px 0 0 0; opacity: 0.9;">From your portfolio website</p>
+            </div>
+            
+            <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+              <h2 style="color: #495057; margin-top: 0;">Contact Details</h2>
+              <p style="margin: 10px 0;"><strong>Name:</strong> ${name}</p>
+              <p style="margin: 10px 0;"><strong>Email:</strong> <a href="mailto:${email}" style="color: #667eea; text-decoration: none;">${email}</a></p>
+              <p style="margin: 10px 0;"><strong>Subject:</strong> ${subject}</p>
+            </div>
+            
+            <div style="background: white; padding: 20px; border: 1px solid #dee2e6; border-radius: 8px; margin-bottom: 20px;">
+              <h3 style="color: #495057; margin-top: 0;">Message:</h3>
+              <div style="white-space: pre-wrap; background: #f8f9fa; padding: 15px; border-radius: 5px; border-left: 4px solid #667eea;">${message}</div>
+            </div>
+            
+            <div style="text-align: center; padding: 20px; background: #f8f9fa; border-radius: 8px; font-size: 14px; color: #6c757d;">
+              <p style="margin: 0;">This message was sent from your portfolio contact form.</p>
+              <p style="margin: 5px 0 0 0;">You can reply directly to this email to respond to ${name}.</p>
+            </div>
+          </body>
+          </html>
         `,
       }),
     });

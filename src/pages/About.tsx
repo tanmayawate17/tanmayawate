@@ -39,8 +39,8 @@ const About = () => {
     },
     {
       year: "May 2025",
-      title: "Ongoing Community and Research Impact",
-      description: "Contributing to ICT Skin Donation Community Project and pursuing CFD research internship under Prof. Yogesh Shinde, focusing on CSTR impeller performance."
+      title: "Research Focus and Community Impact",
+      description: "Successfully completed ICT Skin Donation Community Project as Social Media Manager and currently pursuing CFD research internship under Prof. Yogesh Shinde, focusing on CSTR impeller performance optimization."
     }
   ];
 

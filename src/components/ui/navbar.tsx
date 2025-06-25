@@ -33,10 +33,17 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+    // Prevent body scroll when menu is open
+    if (!isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
   };
 
   const handleNavigation = (path: string) => {
     setIsOpen(false);
+    document.body.style.overflow = 'unset';
     navigate(path);
     // Scroll to top after navigation
     setTimeout(() => {
@@ -56,80 +63,96 @@ const Navbar = () => {
   ];
 
   return (
-    <nav
-      className={cn(
-        'fixed w-full z-50 transition-all duration-300',
-        scrolled 
-          ? 'bg-[#0A0A0A]/90 backdrop-blur-md py-3 shadow-md' 
-          : 'bg-transparent py-5'
-      )}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center">
-          <Link to="/" className="text-2xl font-heading font-bold neon-text-blue">
-            TA
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-4 lg:space-x-6">
-            {navLinks.map((link) => (
-              <button
-                key={link.path}
-                onClick={() => handleNavigation(link.path)}
-                className={cn(
-                  'text-sm font-medium transition-all duration-300 hover:text-neon-blue whitespace-nowrap',
-                  location.pathname === link.path
-                    ? 'text-neon-blue'
-                    : 'text-gray-300'
-                )}
-              >
-                {link.name}
-              </button>
-            ))}
-          </div>
-
-          {/* Mobile Navigation Button */}
-          <button
-            className="md:hidden text-gray-200 focus:outline-none z-50 relative"
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? (
-              <X className="h-6 w-6 text-neon-blue" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Navigation Menu */}
-      <div
+    <>
+      <nav
         className={cn(
-          'md:hidden fixed inset-0 bg-[#0A0A0A]/98 backdrop-blur-lg transition-all duration-300 ease-in-out',
-          isOpen
-            ? 'opacity-100 translate-x-0 z-40'
-            : 'opacity-0 -translate-x-full pointer-events-none z-40'
+          'fixed w-full z-50 transition-all duration-300',
+          scrolled 
+            ? 'bg-[#0A0A0A]/95 backdrop-blur-md py-3 shadow-lg border-b border-[#333]' 
+            : 'bg-transparent py-5'
         )}
       >
-        <div className="flex flex-col items-center justify-center h-full space-y-8 py-10 px-6 overflow-y-auto">
-          {navLinks.map((link) => (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center">
+            <Link to="/" className="text-2xl font-heading font-bold neon-text-blue z-50 relative">
+              TA
+            </Link>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex space-x-4 lg:space-x-6">
+              {navLinks.map((link) => (
+                <button
+                  key={link.path}
+                  onClick={() => handleNavigation(link.path)}
+                  className={cn(
+                    'text-sm font-medium transition-all duration-300 hover:text-neon-blue whitespace-nowrap px-3 py-2 rounded-md',
+                    location.pathname === link.path
+                      ? 'text-neon-blue bg-[#111]'
+                      : 'text-gray-300 hover:bg-[#111]'
+                  )}
+                >
+                  {link.name}
+                </button>
+              ))}
+            </div>
+
+            {/* Mobile Navigation Button */}
             <button
-              key={link.path}
-              onClick={() => handleNavigation(link.path)}
-              className={cn(
-                'text-xl font-medium transition-all duration-300 hover:text-neon-blue w-full text-center py-2',
-                location.pathname === link.path
-                  ? 'text-neon-blue'
-                  : 'text-gray-300'
-              )}
+              className="md:hidden text-gray-200 focus:outline-none z-50 relative p-2"
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
             >
-              {link.name}
+              {isOpen ? (
+                <X className="h-6 w-6 text-neon-blue" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
-          ))}
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+
+      {/* Mobile Navigation Overlay */}
+      {isOpen && (
+        <div className="md:hidden fixed inset-0 z-40 bg-[#0A0A0A]/98 backdrop-blur-lg">
+          <div className="flex flex-col items-center justify-center min-h-screen px-6 py-20">
+            <div className="w-full max-w-sm space-y-6">
+              {navLinks.map((link, index) => (
+                <button
+                  key={link.path}
+                  onClick={() => handleNavigation(link.path)}
+                  className={cn(
+                    'block w-full text-center text-xl font-medium transition-all duration-300 py-4 px-6 rounded-lg border',
+                    location.pathname === link.path
+                      ? 'text-neon-blue border-neon-blue bg-[#111] shadow-neon-blue'
+                      : 'text-gray-300 border-[#333] hover:text-neon-blue hover:border-neon-blue hover:bg-[#111]'
+                  )}
+                  style={{
+                    animationDelay: `${index * 0.1}s`,
+                    animation: 'fadeInUp 0.5s ease-out forwards'
+                  }}
+                >
+                  {link.name}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      <style jsx>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
+    </>
   );
 };
 

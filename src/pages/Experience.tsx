@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Briefcase } from 'lucide-react';
 import Navbar from '@/components/ui/navbar';
@@ -21,8 +20,8 @@ const Experience = () => {
     {
       title: "Social Media Manager",
       company: "ICT-Skin Donation Awareness Campaign",
-      period: "February 2025 - Present",
-      description: "Managing social media presence for the Skin Donation Awareness Campaign at ICT, focusing on creating engaging content and expanding the campaign's digital reach to promote awareness about skin donation.",
+      period: "February 2025 - May 2025",
+      description: "Managed social media presence for the Skin Donation Awareness Campaign at ICT, focusing on creating engaging content and expanding the campaign's digital reach to promote awareness about skin donation.",
       responsibilities: [
         "Managed LinkedIn and X accounts, creating engaging content for project visibility",
         "Enhanced audience engagement through responsive communication and strategic posts",
