@@ -1,5 +1,6 @@
+
 import React, { useState } from 'react';
-import { Mail, Linkedin, Instagram, MapPin, Send } from 'lucide-react';
+import { Mail, Linkedin, Instagram, Send } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import Navbar from '@/components/ui/navbar';
@@ -12,7 +13,7 @@ const Contact = () => {
     subject: '',
     message: '',
   });
-  const [isSubmitting, setIsSubmitting = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -194,18 +195,6 @@ const Contact = () => {
                         <a href="mailto:tanmayawate0017@gmail.com" className="text-gray-400 hover:text-neon-blue transition-colors">
                           tanmayawate0017@gmail.com
                         </a>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0">
-                        <div className="flex items-center justify-center h-12 w-12 rounded-md bg-[#111] border border-[#333]">
-                          <MapPin className="h-6 w-6 text-neon-pink" />
-                        </div>
-                      </div>
-                      <div className="ml-4">
-                        <h3 className="text-lg font-medium text-white">Location</h3>
-                        <p className="text-gray-400">Mumbai, Maharashtra, India</p>
                       </div>
                     </div>
                     
