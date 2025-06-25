@@ -27,13 +27,11 @@ const Navbar = () => {
 
   useEffect(() => {
     setIsOpen(false);
-    // Scroll to top when route changes
     window.scrollTo(0, 0);
   }, [location]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-    // Prevent body scroll when menu is open
     if (!isOpen) {
       document.body.style.overflow = 'hidden';
     } else {
@@ -45,7 +43,6 @@ const Navbar = () => {
     setIsOpen(false);
     document.body.style.overflow = 'unset';
     navigate(path);
-    // Scroll to top after navigation
     setTimeout(() => {
       window.scrollTo(0, 0);
     }, 100);
@@ -122,14 +119,13 @@ const Navbar = () => {
                   key={link.path}
                   onClick={() => handleNavigation(link.path)}
                   className={cn(
-                    'block w-full text-center text-xl font-medium transition-all duration-300 py-4 px-6 rounded-lg border',
+                    'block w-full text-center text-xl font-medium transition-all duration-300 py-4 px-6 rounded-lg border animate-fade-in-up',
                     location.pathname === link.path
                       ? 'text-neon-blue border-neon-blue bg-[#111] shadow-neon-blue'
                       : 'text-gray-300 border-[#333] hover:text-neon-blue hover:border-neon-blue hover:bg-[#111]'
                   )}
                   style={{
-                    animationDelay: `${index * 0.1}s`,
-                    animation: 'fadeInUp 0.5s ease-out forwards'
+                    animationDelay: `${index * 0.1}s`
                   }}
                 >
                   {link.name}
@@ -140,7 +136,7 @@ const Navbar = () => {
         </div>
       )}
 
-      <style jsx>{`
+      <style>{`
         @keyframes fadeInUp {
           from {
             opacity: 0;
@@ -150,6 +146,10 @@ const Navbar = () => {
             opacity: 1;
             transform: translateY(0);
           }
+        }
+        
+        .animate-fade-in-up {
+          animation: fadeInUp 0.5s ease-out forwards;
         }
       `}</style>
     </>
